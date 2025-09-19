@@ -39,7 +39,7 @@ module.exports = {
   methods: {
     initItem: function() {
       var self = this;
-      axios.get('/html/images/act/2020/11/01/json/data.json')
+      axios.get((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2020/11/01/json/data.json")
       .then(function(response){
         let data = response.data;
         self.isLoading = false;

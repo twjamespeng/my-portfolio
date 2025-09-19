@@ -173,7 +173,7 @@ module.exports = {
   methods: {
     initItem: function() {
       var self = this;
-      var path1 = '/html/images/act/2025/02/vsv/json/data.json';
+      var path1 = (window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2025/02/vsv/json/data.json";
       var path;
 
       let timeFromURL = this.getUrlParameter('t');

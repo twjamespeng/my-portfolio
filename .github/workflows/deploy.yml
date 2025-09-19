@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write   # ⬅️ 必須加這行
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build
+        run: npm run build   # build 完後會自動跑 postbuild
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

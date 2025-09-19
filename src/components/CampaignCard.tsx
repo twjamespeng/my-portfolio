@@ -1,6 +1,8 @@
 import type { Campaign } from "@/types/campaign";
-import Link from "next/link";
 import Image from "next/image";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
 
 export default function CampaignCard({
   title,
@@ -9,18 +11,25 @@ export default function CampaignCard({
   demoUrl,
   thumbnailUrl,
 }: Campaign) {
+  // 取得 basePath（在 next.config.ts 設定）
+  const basePath = publicRuntimeConfig?.basePath || "";
+
+  // 自動補完整路徑
+  const resolvedThumbnail = thumbnailUrl ? `${basePath}${thumbnailUrl}` : null;
+  const resolvedDemoUrl = demoUrl ? `${basePath}${demoUrl}` : null;
+
   return (
     <div className="border border-teal-800 rounded-xl p-5 shadow-sm hover:shadow-md transition bg-dark flex flex-col">
-      {demoUrl && (
+      {resolvedDemoUrl && (
         <a
-          href={demoUrl}
+          href={resolvedDemoUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="block overflow-hidden"
         >
-          {thumbnailUrl && (
+          {resolvedThumbnail && (
             <Image
-              src={thumbnailUrl}
+              src={resolvedThumbnail}
               alt={title}
               width={600}
               height={310}
@@ -43,11 +52,11 @@ export default function CampaignCard({
           </li>
         ))}
       </ul>
-      
+
       <div className="mt-4 flex space-x-3">
-        {demoUrl && (
+        {resolvedDemoUrl && (
           <a
-            href={demoUrl}
+            href={resolvedDemoUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1 text-sm bg-teal-500 text-white rounded hover:bg-teal-600"

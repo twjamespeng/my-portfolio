@@ -10,8 +10,11 @@ const nextConfig: NextConfig = {
     ? {
         basePath: "/my-portfolio",
         assetPrefix: "/my-portfolio/",
+        publicRuntimeConfig: { basePath: "/my-portfolio" },
       }
-    : {}),
+    : {
+        publicRuntimeConfig: { basePath: "" },
+      }),
 };
 
 export default nextConfig;

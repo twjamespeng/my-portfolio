@@ -1,0 +1,200 @@
+[
+  {
+    "start": "2022/05/10 00:00",
+    "id": "2971822021",
+    "brand": "【天香樓mini】",
+    "name": "亞緻經典粽(4入)",
+    "price": "899",
+    "available": "false",
+    "launch": "0",
+    "index": "1",
+    "type": "A"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3048922022,
+    "brand": "【億長御坊】",
+    "name": "北部台灣粽(6入)x2袋",
+    "price": 999,
+    "available": "false",
+    "launch": "0",
+    "index": "2",
+    "type": "A"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3044912022,
+    "brand": "【愛上新鮮】",
+    "name": "日式蒲燒鰻魚粽20顆(110g/顆)",
+    "price": 1460,
+    "available": "false",
+    "launch": "0",
+    "index": "3",
+    "type": "A"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 2973172021,
+    "brand": "【綠原品】",
+    "name": "(全素)養生猴頭菇粽(3入)",
+    "price": 459,
+    "available": "false",
+    "launch": "0",
+    "index": "4",
+    "type": "A"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3046742022,
+    "brand": "南門市場 老林記素食",
+    "name": "6入禮盒 (板栗粽+香菇蓮子棕)",
+    "price": 1180,
+    "available": "false",
+    "launch": "0",
+    "index": "5",
+    "type": "A"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3048952022,
+    "brand": "【蔣府宴】",
+    "name": "滬味菜飯粽(3入)x2盒",
+    "price": 978,
+    "available": "false",
+    "launch": "0",
+    "index": "6",
+    "type": "A"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 2993802021,
+    "brand": "永豐餘生技",
+    "name": "莊園油品禮盒",
+    "price": 1150,
+    "available": "false",
+    "launch": "0",
+    "index": "7",
+    "type": "B"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3034632022,
+    "brand": "【嘉義林聰明】",
+    "name": "沙鍋魚頭禮盒3件組",
+    "price": 1389,
+    "available": "false",
+    "launch": "0",
+    "index": "8",
+    "type": "B"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3034572022,
+    "brand": "【海底撈 】經典鴛鴦鍋",
+    "name": "套餐(麻辣/三鮮14件組)",
+    "price": "1299",
+    "available": "false",
+    "launch": "0",
+    "index": "9",
+    "type": "B"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3014932021,
+    "brand": "尊貴烏魚子",
+    "name": "干貝醬禮盒/二入裝",
+    "price": 800,
+    "available": "false",
+    "launch": "0",
+    "index": "10",
+    "type": "B"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 2964782021,
+    "brand": "【谷溜谷溜】",
+    "name": "井裡月_12瓶(含禮盒)",
+    "price": 1240,
+    "available": "false",
+    "launch": "0",
+    "index": "11",
+    "type": "B"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 2638102016,
+    "brand": "豆油伯職人推薦",
+    "name": "紅麴+缸底醬油4入禮盒組",
+    "price": 1200,
+    "available": "false",
+    "launch": "0",
+    "index": "12",
+    "type": "B"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3040962022,
+    "brand": "開喜-凍頂烏龍茶",
+    "name": "無糖款 575mlX24入/箱",
+    "price": 529,
+    "available": "false",
+    "launch": "0",
+    "index": "13",
+    "type": "C"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3041042022,
+    "brand": "屏東金鑽鳳梨",
+    "name": "外銷等級約5台斤x2盒(2顆/盒)",
+    "price": 620,
+    "available": "false",
+    "launch": "0",
+    "index": "14",
+    "type": "C"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3044372022,
+    "brand": "[花草巫婆] ",
+    "name": "魔力消食(12入)",
+    "price": 300,
+    "available": "false",
+    "launch": "0",
+    "index": "15",
+    "type": "C"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3006582021,
+    "brand": "樂知能",
+    "name": "制幽止逆舒衛組(10包/盒)×6盒",
+    "price": 1980,
+    "available": "false",
+    "launch": "0",
+    "index": "16",
+    "type": "C"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 2810062018,
+    "brand": "澳洲Natural Life",
+    "name": "麥蘆卡蜂蜜蜂膠潤喉糖(40顆X5入)",
+    "price": 2980,
+    "available": "false",
+    "launch": "0",
+    "index": "17",
+    "type": "C"
+  },
+  {
+    "start": "2022/05/10 00:00",
+    "id": 3046812022,
+    "brand": "【吉品保健】療肺草清潤飴",
+    "name": "80克±3%(補充包)*5包",
+    "price": 1110,
+    "available": "false",
+    "launch": "0",
+    "index": "18",
+    "type": "C"
+  }
+]

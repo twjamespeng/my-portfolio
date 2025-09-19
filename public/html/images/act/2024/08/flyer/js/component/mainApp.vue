@@ -1,0 +1,257 @@
+<template>
+  <div>
+    <div class="d-flex flex-column position-relative">
+
+      
+      <div class="landing-main">
+        <picture class="d-block position-relative" style="z-index: 2;">
+          <source srcset="images/act/2024/08/flyer/images/wave1/landing.jpg" media="(min-width: 992px)">
+          <img class="img-fluid pe-none us-none" src="images/act/2024/08/flyer/images/wave1/mobile/landing.jpg" alt="landing">
+        </picture>
+        <div class="primary-btn-group" style="z-index: 3;">
+          <div v-if="wave1" class="wave1 event-btn-container p-0 position-relative">
+            <div class="d-flex event-btn-group mx-auto">
+              <div class="px-1 px-lg-3">
+                <a href="#eventModal-1" data-bs-toggle="modal" class="d-block">
+                  <picture class="d-block">
+                    <source srcset="images/act/2024/08/flyer/images/wave1/primary-btn-1.png" media="(min-width: 992px)">
+                    <img class="img-fluid us-none" src="images/act/2024/08/flyer/images/wave1/mobile/primary-btn-1.png" alt="滿額抽5000金幣">
+                  </picture>
+                </a>
+              </div>
+              <div class="px-1 px-lg-3">
+                <a href="#eventModal-2" data-bs-toggle="modal" class="d-block">
+                  <picture class="d-block">
+                    <source srcset="images/act/2024/08/flyer/images/wave1/primary-btn-2.png" media="(min-width: 992px)">
+                    <img class="img-fluid us-none" src="images/act/2024/08/flyer/images/wave1/mobile/primary-btn-2.png" alt="滿額送最高600銀幣">
+                  </picture>
+                </a>
+              </div>
+              <div class="px-1 px-lg-3">
+                <a href="#eventModal-3" data-bs-toggle="modal" class="d-block">
+                  <picture class="d-block">
+                    <source srcset="images/act/2024/08/flyer/images/wave1/primary-btn-3.png" media="(min-width: 992px)">
+                    <img class="img-fluid us-none" src="images/act/2024/08/flyer/images/wave1/mobile/primary-btn-3.png" alt="滿額抽吉米莊">
+                  </picture>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div v-if="wave2" class="wave2 d-flex flex-column align-items-center event-btn-container p-0 position-relative">
+            <div class="date-0906" style=""><img src="images/act/2024/08/flyer/images/wave1/date-0906.png" class="img-fluid"></div>
+            <div class="d-flex event-btn-group justify-content-center mx-auto">
+              <div class="px-1 px-lg-3">
+                <a href="#eventModal-4" data-bs-toggle="modal" class="d-block">
+                  <picture class="d-block">
+                    <source srcset="images/act/2024/08/flyer/images/wave1/primary-btn-4.png" media="(min-width: 992px)">
+                    <img class="img-fluid us-none" src="images/act/2024/08/flyer/images/wave1/mobile/primary-btn-4.png" alt="滿額送最高500銀幣">
+                  </picture>
+                </a>
+              </div>
+              <div class="px-1 px-lg-3">
+                <a href="#eventModal-5" data-bs-toggle="modal" class="d-block">
+                  <picture class="d-block">
+                    <source srcset="images/act/2024/08/flyer/images/wave1/primary-btn-5.png" media="(min-width: 992px)">
+                    <img class="img-fluid us-none" src="images/act/2024/08/flyer/images/wave1/mobile/primary-btn-5.png" alt="逢9加碼抽">
+                  </picture>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+
+      <!-- <div class="event-date text-center text-white mb-3 p-3" style="">活動期間：2023/5/19(五)～6/25(日)</div> -->
+
+      <!-- 公格商品 itemApp -->
+      <div class="container-fluid container-item-app p-0 position-relative" style="z-index: 2;">
+        <item-app></item-app>  
+      </div>
+
+      <!-- modal -->
+      <modal-app></modal-app>
+
+    
+  </div>
+</template>
+
+<script>
+module.exports = {
+  data: function() {
+    return {
+      youtubeURL: '',
+      month: '',
+      wave1: false,
+      wave2: false
+    };
+  },
+  components: {
+    'item-app': httpVueLoader('/html/images/act/2024/08/flyer/js/component/itemApp.vue'),
+    'modal-app': httpVueLoader('/html/images/act/2024/08/flyer/js/component/modalApp.vue')
+  },
+  methods: {
+    init: function() {
+      var main = this;
+      main.promoCheck();
+
+      // setTimeout(()=>{
+
+
+      // const swpD = new Swiper('#swpD', {
+        
+      //   loop: true,
+      //   slidesPerView: 5,
+      //   slidesPerGroup: 1,
+      //   speed: 10000,
+      //   autoplay: {
+      //     delay: 0,
+      //   },
+      //   spaceBetween: 0,
+      //   effect: 'slide',
+        
+      // });
+      
+
+      // }, 500);
+
+
+
+      
+
+      // let m = 'febuary';
+
+      /*let timeFromURL = this.getUrlParameter('t');
+      if (timeFromURL) {
+        let monthFromURL = timeFromURL.substr(4, 2);
+        let mmddFromURL = timeFromURL.substr(4, 4);
+        console.log('mmddFromURL: ' + mmddFromURL);
+
+        if (timeFromURL.substr(0,8) == '20230424') {
+          this.wave2 = true;
+
+          $('body').addClass('wave-2');
+          $("meta[property='og:image']").attr("content", "https://www.vivatv.com.tw/html/images/act/2024/08/flyer/images/og-wave2.jpg");
+        } else if (timeFromURL.substr(0,8) >= '20230425') {
+          this.wave2 = true;
+          
+
+          $('body').addClass('wave-2');
+          $("meta[property='og:image']").attr("content", "https://www.vivatv.com.tw/html/images/act/2024/08/flyer/images/og-wave2.jpg");
+        }
+
+      } else {
+        let year = moment().format('YYYY');
+        let month = moment().format('MM');
+        let date = moment().format('DD');
+
+        
+
+        let yyyymmdd = year + month + date ;
+        console.log('mmdd: ' + yyyymmdd);
+
+        if (yyyymmdd >= '20230424') { 
+          this.wave2 = true;
+          $('body').addClass('wave-2');
+          $("meta[property='og:image']").attr("content", "https://www.vivatv.com.tw/html/images/act/2024/08/flyer/images/og-wave2.jpg");
+        } 
+
+        
+      }*/
+
+      let timeFromURL = this.getUrlParameter('t');
+      var dataTime;
+
+      let year = moment().format('YYYY');
+      let month = moment().format('MM');
+      let date = moment().format('DD');
+
+      var timeNow = moment().format('YYYY-MM-DD HH:mm:ss');
+      if (timeFromURL) {
+        timeNow = moment(timeFromURL).format('YYYY-MM-DD HH:mm:ss');
+      }
+      
+
+      if ( moment(timeNow).isBetween('2024-08-27 00:00:00', '2024-08-31 23:59:59', 'second', '[]') ) {
+        this.wave1 = true;
+        document.body.classList.add('wave1');
+      }
+
+      if ( moment(timeNow).isBetween('2024-09-01 00:00:00', '2024-10-13 23:59:59', 'second', '[]') ) {
+        this.wave2 = true;
+        document.body.classList.add('wave2');
+      }
+
+      
+
+
+
+      if (timeFromURL) {
+        // dataTime = timeFromURL.substr(4, 4);
+        dataTime = timeFromURL;
+        console.log('dataTime: ' + dataTime);
+        
+      } else {
+        dataTime = year + month + date;
+        console.log('dataTime: ' + dataTime);
+        
+      }
+
+
+      
+
+      
+      
+      
+      
+
+      
+    },
+    promoCheck: function() {
+/*      let timeFromURL = this.getUrlParameter('t');
+
+      let today = moment().format('YYYY-MM-DD');
+
+      if (timeFromURL >= '20211102') {
+        today = '2021-11-02';
+      }
+
+      let promoChangeDate = moment('2021-11-02');
+      if (moment(today).isBefore(promoChangeDate)) {
+        this.youtubeURL = 'https://www.youtube.com/embed/LSLsRrpFlCw?playsinline=1&showinfo=0&rel=0&modestbranding=1&enablejsapi=1&autoplay=0&mute=1&playlist=LSLsRrpFlCw&loop=1'; //1st promo
+      } else {
+        this.youtubeURL = 'https://www.youtube.com/embed/LSLsRrpFlCw?playsinline=1&showinfo=0&rel=0&modestbranding=1&enablejsapi=1&autoplay=0&mute=1&playlist=LSLsRrpFlCw&loop=1'; //2nd promo
+      }*/
+    },
+    getUrlParameter: function(sParam) {
+      var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+      }
+    }
+  },
+  mounted: function() {
+    this.init();
+    
+
+    // var rellax = new Rellax('.rellax', {
+    //   speed: -2,
+    //   center: false,
+    //   wrapper: null,
+    //   round: true,
+    //   vertical: true,
+    //   horizontal: false
+    // });
+  }
+}
+</script>
+

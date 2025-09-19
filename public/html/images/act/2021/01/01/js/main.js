@@ -1,7 +1,7 @@
 new Vue({
   el: '#app',
   components: { 
-    'main-app': httpVueLoader((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2021/01/01/js/component/mainApp.vue')
+    'main-app': httpVueLoader((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2021/01/01/js/component/mainApp.vue")
   }
 });
 

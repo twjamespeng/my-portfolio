@@ -89,8 +89,8 @@ module.exports = {
     };
   },
   components: {
-    'item-app': httpVueLoader((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2022/07/15/js/component/itemApp.vue'),
-    'modal-app': httpVueLoader((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2022/07/15/js/component/modalApp.vue')
+    'item-app': httpVueLoader((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2022/07/15/js/component/itemApp.vue"),
+    'modal-app': httpVueLoader((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2022/07/15/js/component/modalApp.vue")
   },
   methods: {
     init: function() {

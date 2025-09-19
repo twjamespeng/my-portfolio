@@ -335,8 +335,8 @@ module.exports = {
   methods: {
     initItem: function() {
       var self = this;
-      var path1 = '/html/images/act/2022/05/16/json/data.json';
-      var path2 = '/html/images/act/2022/05/16/json/data2.json';
+      var path1 = (window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2022/05/16/json/data.json";
+      var path2 = (window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2022/05/16/json/data2.json";
       var path;
 
       let timeFromURL = this.getUrlParameter('t');

@@ -7,8 +7,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint",
-    "postbuild": "node scripts/fix-paths.js"
+    "lint": "eslint"
   },
   "dependencies": {
     "next": "15.5.3",

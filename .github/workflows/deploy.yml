@@ -3,7 +3,10 @@ name: Deploy Next.js site to GitHub Pages
 on:
   push:
     branches:
-      - main  # 你主要開發的分支
+      - main
+
+permissions:
+  contents: write   # ⬅️ 必須加這行
 
 jobs:
   build-and-deploy:

@@ -409,8 +409,8 @@ module.exports = {
     };
   },
   components: {
-    'item-app': httpVueLoader('/html/images/act/2023/02/24/js/component/itemApp.vue'),
-    'modal-app': httpVueLoader('/html/images/act/2023/02/24/js/component/modalApp.vue')
+    'item-app': httpVueLoader((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2023/02/24/js/component/itemApp.vue'),
+    'modal-app': httpVueLoader((window.location.hostname.includes("github.io") ? "/my-portfolio" : "") + "/html/images/act/2023/02/24/js/component/modalApp.vue')
   },
   methods: {
     init: function() {

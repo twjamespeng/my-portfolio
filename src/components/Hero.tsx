@@ -216,7 +216,7 @@ export default function Hero() {
       {/* 粒子效果 (星星+連線+閃爍) */}
       <Particles
         id="tsparticles"
-        className="absolute inset-0 -z-20 opacity-50"
+        className="absolute inset-0 -z-20 opacity-80"
         style={{ width: "100%", height: "100%" }}
         options={particlesOptions}
       />

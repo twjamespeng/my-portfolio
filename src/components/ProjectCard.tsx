@@ -10,7 +10,7 @@ export default function ProjectCard({
   return (
     <div className="border border-teal-800 rounded-xl p-5 shadow-sm hover:shadow-md transition bg-dark flex flex-col">
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm flex-1">{summary}</p>
+      <p className="text-gray-400 text-sm flex-1">{summary}</p>
 
       <ul className="flex flex-wrap gap-2 mt-3">
         {tech.map((t) => (

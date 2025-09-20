@@ -2,8 +2,7 @@ name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 permissions:
   contents: write
@@ -11,7 +10,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -23,13 +21,16 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build for GitHub Pages
+      # Debug：確認 GitHub Environments 有沒有正確帶入
+      - name: Debug ENV
+        run: |
+          echo "::notice::DEPLOY_ENV=[$DEPLOY_ENV]"
+          echo "::notice::NEXT_PUBLIC_BASE_PATH=[$NEXT_PUBLIC_BASE_PATH]"
+
+      - name: Build (static export)
         run: npm run build
-        env:
-          DEPLOY_ENV: ${{ vars.DEPLOY_ENV }}
-          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

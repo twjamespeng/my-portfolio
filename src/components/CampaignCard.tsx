@@ -2,6 +2,7 @@
 
 import type { Campaign } from "@/types/campaign";
 import Image from "next/image";
+import { withBasePath } from "@/utils/withBasePath";
 
 export default function CampaignCard({
   title,
@@ -10,9 +11,8 @@ export default function CampaignCard({
   demoUrl,
   thumbnailUrl,
 }: Campaign) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const resolvedThumbnail = thumbnailUrl ? `${basePath}${thumbnailUrl}` : null;
-  const resolvedDemoUrl = demoUrl ? `${basePath}${demoUrl}` : null;
+  const resolvedThumbnail = thumbnailUrl ? withBasePath(thumbnailUrl) : null;
+  const resolvedDemoUrl = demoUrl ? withBasePath(demoUrl) : null;
 
   return (
     <div className="border border-teal-800 rounded-xl p-5 shadow-sm hover:shadow-md transition bg-dark flex flex-col">
@@ -39,6 +39,7 @@ export default function CampaignCard({
 
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-400 text-sm flex-1">{summary}</p>
+
       <ul className="flex flex-wrap gap-2 mt-3">
         {tech.map((t) => (
           <li

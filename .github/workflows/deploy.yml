@@ -21,7 +21,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       # Debug：確認 GitHub Environments 有沒有正確帶入
       - name: Debug ENV

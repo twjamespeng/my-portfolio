@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="text-center py-6 mt-12">
+    <footer className="text-center py-6 md:py-12">
       <p className="text-sm text-gray-600">
         © {new Date().getFullYear()} James Peng. All rights reserved.
       </p>
@@ -12,13 +12,6 @@ export default function Footer() {
         >
           GitHub
         </a>
-        {/* <a
-          href="https://linkedin.com"
-          target="_blank"
-          className="text-gray-500 hover:text-gray-800"
-        >
-          LinkedIn
-        </a> */}
       </div>
     </footer>
   );

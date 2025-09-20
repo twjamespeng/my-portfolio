@@ -21,8 +21,31 @@
   }
 } */
 
+html,body {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Oswald", "Chiron GoRound TC", sans-serif;
 }
+
+.bg-animated-gradient {
+  background: linear-gradient(-45deg, #541c04, #321e8a, #521987);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

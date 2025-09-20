@@ -1,8 +1,7 @@
+"use client";
+
 import type { Campaign } from "@/types/campaign";
 import Image from "next/image";
-import getConfig from "next/config";
-
-const { publicRuntimeConfig } = getConfig();
 
 export default function CampaignCard({
   title,
@@ -11,10 +10,7 @@ export default function CampaignCard({
   demoUrl,
   thumbnailUrl,
 }: Campaign) {
-  // 取得 basePath（在 next.config.ts 設定）
-  const basePath = publicRuntimeConfig?.basePath || "";
-
-  // 自動補完整路徑
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const resolvedThumbnail = thumbnailUrl ? `${basePath}${thumbnailUrl}` : null;
   const resolvedDemoUrl = demoUrl ? `${basePath}${demoUrl}` : null;
 
@@ -33,6 +29,7 @@ export default function CampaignCard({
               alt={title}
               width={600}
               height={310}
+              priority={false}
               className="rounded-md mb-2 hover:scale-105 transition-transform duration-300 ease-in-out"
               title={title}
             />

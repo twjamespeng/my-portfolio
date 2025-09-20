@@ -1,5 +1,4 @@
 import type { Project } from "@/types/project";
-import Link from "next/link";
 
 export default function ProjectCard({
   title,

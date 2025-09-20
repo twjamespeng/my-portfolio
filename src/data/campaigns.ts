@@ -107,6 +107,14 @@ export const campaigns: Campaign[] = [
     demoUrl: "/html/202402sp.html?t=20240220",
   },
   {
+    slug: "202401flyer",
+    title: "舞龍迎春 團圓呷好味",
+    summary: "切版、商品載入",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202401flyer.jpg",
+    demoUrl: "/html/202401flyer.html?t=20240120",
+  },
+  {
     slug: "202312sp-2",
     title: "美好納福迎新春",
     summary: "切版、特效、商品載入",
@@ -121,5 +129,13 @@ export const campaigns: Campaign[] = [
     tech: ["HTML", "CSS", "JavaScript"],
     thumbnailUrl: "/thumbnails/202312sp-1.jpg",
     demoUrl: "/html/202312sp.html?t=20231220",
+  },
+  {
+    slug: "202311sp",
+    title: "最強雙11 狂購Hi翻天",
+    summary: "切版、特效、商品載入",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202311sp.jpg",
+    demoUrl: "/html/202311sp.html?t=20231120",
   },
 ];

@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "eslint",
-    "build:github": "DEPLOY_ENV=github next build && next export"
+    "lint": "eslint"
   },
   "dependencies": {
     "@tsparticles/engine": "^3.9.1",

@@ -40,7 +40,7 @@ export default function ProjectCard({
         {tech.map((t) => (
           <li
             key={t}
-            className="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-700"
+            className="text-xs px-2 py-1 border border-teal-500 rounded-full text-teal-500"
           >
             {t}
           </li>

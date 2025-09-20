@@ -23,6 +23,7 @@
 
 html,body {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* Adjust based on your header height */
 }
 
 body {

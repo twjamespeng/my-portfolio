@@ -43,7 +43,8 @@ export default function CampaignsSection() {
       className="w-full py-6 md:py-20 bg-gradient-to-b from-[#1f1f1f] to-[#171717]"
     >
       <div className="container mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl font-bold mb-6">行銷活動頁 Campaigns</h2>
+        <h2 className="text-3xl font-bold mb-6">行銷活動頁 <span className="text-teal-500">Campaigns</span></h2>
+        <p className="text-gray-300 mb-6">行銷活動頁部份，我負責頁面切版、動畫特效、商品動態導入，提升活動頁的互動感與靈活度。</p>
         <div ref={containerRef} className="grid sm:grid-cols-3 gap-6">
           {campaigns.map((p, i) => (
             <motion.div

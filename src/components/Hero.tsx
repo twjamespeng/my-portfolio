@@ -250,9 +250,9 @@ export default function Hero() {
 
       <motion.p
         variants={taglineVariants}
-        className="text-xs md:text-lg text-gray-300 max-w-2xl drop-shadow drop-shadow-black/50"
+        className="text-xl md:text-lg text-gray-300 max-w-2xl drop-shadow drop-shadow-black/50"
       >
-        網頁設計師 & 前端開發者，專注於設計美觀、快速且友善的網站。
+        網頁設計師 & 前端開發者，<span className="inline md:hidden"><br /></span>專注於設計美觀、快速且友善的網站。
       </motion.p>
 
       {/* 按鈕 */}

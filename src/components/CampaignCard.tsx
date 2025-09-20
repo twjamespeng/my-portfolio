@@ -15,7 +15,7 @@ export default function CampaignCard({
   const resolvedDemoUrl = demoUrl ? withBasePath(demoUrl) : null;
 
   return (
-    <div className="border border-teal-800 rounded-xl p-5 shadow-sm hover:shadow-md transition bg-dark flex flex-col">
+    <div className="border border-teal-800 rounded-xl p-5 shadow-sm hover:shadow-md bg-transparent hover:bg-teal-900/30 transition-all duration-300 flex flex-col">
       {resolvedDemoUrl && (
         <a
           href={resolvedDemoUrl}

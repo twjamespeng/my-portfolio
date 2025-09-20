@@ -7,7 +7,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:github": "DEPLOY_ENV=github next build && next export"
   },
   "dependencies": {
     "@tsparticles/engine": "^3.9.1",

@@ -3,7 +3,7 @@ name: Deploy Next.js site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main   # 只要 push 到 main 就會觸發
 
 permissions:
   contents: write
@@ -25,8 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build   # build 完後會自動跑 postbuild
+      - name: Build for GitHub Pages
+        run: npm run build   # 直接用你 package.json 的 build 指令
+        env:
+          DEPLOY_ENV: ${{ vars.DEPLOY_ENV }}
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

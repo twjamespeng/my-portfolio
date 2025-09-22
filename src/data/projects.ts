@@ -8,7 +8,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "Tailwind CSS", "Express", "Prisma ORM", "MySQL"],
     thumbnailUrl: "/thumbnails/petopia.jpg",
     repoUrl: "https://github.com/twjamespeng/mfee65-pet",
-    pdfUrl: "/petopia.pdf",
+    pdfUrl: "https://twjamespeng.github.io/my-portfolio/petopia.pdf",
   },
   {
     slug: "vivatv",

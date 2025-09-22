@@ -2,6 +2,15 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    slug: "petopia",
+    title: "Petopia 寵物平台",
+    summary: "一個以「寵物為家人」理念打造的一站式平台",
+    tech: ["Next.js", "Tailwind CSS", "Express", "Prisma ORM", "MySQL"],
+    thumbnailUrl: "/thumbnails/petopia.jpg",
+    repoUrl: "https://github.com/twjamespeng/mfee65-pet",
+    pdfUrl: "/petopia.pdf",
+  },
+  {
     slug: "vivatv",
     title: "ViVa TV 電商網站",
     summary: "提供多樣化產品與會員系統的電商平台。",

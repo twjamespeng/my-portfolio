@@ -9,11 +9,12 @@ export default function ProjectCard({
   thumbnailUrl,
   demoUrl,
   repoUrl,
+  pdfUrl
 }: Project) {
   const resolvedThumbnail = thumbnailUrl ? withBasePath(thumbnailUrl) : null;
   return (
-    <div className="border border-teal-800 rounded-xl p-5 shadow-sm hover:shadow-md bg-transparent hover:bg-teal-900/30 transition-all duration-300 flex flex-col">
-      {demoUrl && (
+    <div className="border border-teal-800 rounded-xl p-5 shadow-sm hover:shadow-md bg-transparent hover:bg-teal-900/30 transition-all duration-300 flex flex-col h-full">
+      {thumbnailUrl && (
         <a
           href={demoUrl}
           target="_blank"
@@ -34,9 +35,9 @@ export default function ProjectCard({
         </a>
       )}
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-400 text-sm flex-1">{summary}</p>
+      <p className="text-gray-400 text-sm">{summary}</p>
 
-      <ul className="flex flex-wrap gap-2 mt-3">
+      <ul className="flex flex-wrap gap-2 mt-3 mb-4">
         {tech.map((t) => (
           <li
             key={t}
@@ -47,7 +48,7 @@ export default function ProjectCard({
         ))}
       </ul>
 
-      <div className="mt-4 flex space-x-3">
+      <div className="flex space-x-3 mt-auto">
         {demoUrl && (
           <a
             href={demoUrl}
@@ -65,7 +66,17 @@ export default function ProjectCard({
             rel="noopener noreferrer"
             className="px-3 py-1 text-sm bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
           >
-            Code
+            {pdfUrl ? "Repo (Private)" : "Repo"}
+          </a>
+        )}
+        {pdfUrl && (
+          <a
+            href={pdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1 text-sm bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
+          >
+            企劃書PDF
           </a>
         )}
       </div>

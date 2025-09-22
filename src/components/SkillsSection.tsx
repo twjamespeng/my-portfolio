@@ -27,65 +27,117 @@ export default function SkillsSection() {
     <section
       id="skills"
       ref={sectionRef}
-      className="relative py-20 bg-[#111] text-white px-4 md:px-8 lg:px-16"
+      className="relative py-6 md:py-20 bg-[#111] text-white px-4 md:px-8 lg:px-16"
     >
       <div className="max-w-6xl mx-auto">
         {/* 標題 */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Skills
-        </h2>
+        <h2 className="text-3xl font-bold mb-6">技能 <span className="text-teal-500">Skills</span></h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {Object.entries(skills).map(([category, items]) => (
-            <div key={category}>
-              <h3 className="text-xl font-semibold mb-6 border-b border-teal-600 inline-block pb-1">
-                {category}
-              </h3>
+        <div className="space-y-12 md:space-y-24">
+          {/* Frontend 區塊 */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6 border-b border-teal-600 inline-block pb-1">
+              Frontend
+            </h3>
+            <div className="flex flex-wrap justify-start gap-6">
+              {skills.Frontend.map((skill) => {
+                const Icon = skill.icon as IconType;
+                const skillKey = `Frontend-${skill.name}`;
+                const isActive = activeSkill === skillKey;
 
-              <div className="flex flex-wrap gap-6">
-                {items.map((skill) => {
-                  const Icon = skill.icon as IconType;
-                  const skillKey = `${category}-${skill.name}`;
-                  const isActive = activeSkill === skillKey;
+                return (
+                  <div
+                    key={skillKey}
+                    className="relative flex flex-col items-center"
+                  >
+                    <motion.button
+                      onClick={() => setActiveSkill(isActive ? null : skillKey)}
+                      whileHover={{ scale: 1.15 }}
+                      whileTap={{ scale: 0.9 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="flex flex-col items-center focus:outline-none cursor-pointer"
+                    >
+                      <Icon className={`w-12 h-12 ${skill.color}`} />
+                      <span className="text-xs mt-1">{skill.name}</span>
+                    </motion.button>
 
-                  return (
-                    <div key={skillKey} className="relative">
-                      {/* Icon 按鈕 */}
-                      <motion.button
-                        onClick={() =>
-                          setActiveSkill(isActive ? null : skillKey)
-                        }
-                        whileHover={{ scale: 1.15 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                        className="flex flex-col items-center focus:outline-none cursor-pointer"
-                      >
-                        <Icon className={`w-12 h-12 ${skill.color}`} />
-                        <span className="text-xs mt-1">{skill.name}</span>
-                      </motion.button>
-
-                      {/* Tooltip 動畫 */}
-                      <AnimatePresence>
-                        {isActive && (
-                          <motion.div
-                            key="tooltip"
-                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0.9 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute -top-14 left-1/2 -translate-x-1/2 bg-black text-white text-sm px-3 py-1 rounded-lg shadow-md whitespace-nowrap z-10"
-                          >
-                            {skill.name} — {skill.level}%
-                            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-black"></div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
+                    {/* Tooltip */}
+                    <AnimatePresence>
+                      {isActive && (
+                        <motion.div
+                          key="tooltip"
+                          initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.9 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute -top-14 left-1/2 -translate-x-1/2 bg-black text-white text-sm px-3 py-1 rounded-lg shadow-md whitespace-nowrap z-10"
+                        >
+                          {skill.name} — {skill.level}%
+                          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-black"></div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
             </div>
-          ))}
+          </div>
+
+          {/* Backend / Tools / Design 三欄 */}
+          <div className="grid md:grid-cols-3 gap-10">
+            {Object.entries(skills)
+              .filter(([category]) => category !== "Frontend")
+              .map(([category, items]) => (
+                <div key={category}>
+                  <h3 className="text-xl font-semibold mb-6 border-b border-teal-600 inline-block pb-1">
+                    {category}
+                  </h3>
+                  <div className="flex flex-wrap gap-6">
+                    {items.map((skill) => {
+                      const Icon = skill.icon as IconType;
+                      const skillKey = `${category}-${skill.name}`;
+                      const isActive = activeSkill === skillKey;
+
+                      return (
+                        <div
+                          key={skillKey}
+                          className="relative flex flex-col items-center"
+                        >
+                          <motion.button
+                            onClick={() =>
+                              setActiveSkill(isActive ? null : skillKey)
+                            }
+                            whileHover={{ scale: 1.15 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="flex flex-col items-center focus:outline-none cursor-pointer"
+                          >
+                            <Icon className={`w-12 h-12 ${skill.color}`} />
+                            <span className="text-xs mt-1">{skill.name}</span>
+                          </motion.button>
+
+                          <AnimatePresence>
+                            {isActive && (
+                              <motion.div
+                                key="tooltip"
+                                initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                exit={{ opacity: 0, y: 10, scale: 0.9 }}
+                                transition={{ duration: 0.2 }}
+                                className="absolute -top-14 left-1/2 -translate-x-1/2 bg-black text-white text-sm px-3 py-1 rounded-lg shadow-md whitespace-nowrap z-10"
+                              >
+                                {skill.name} — {skill.level}%
+                                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-black"></div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </section>

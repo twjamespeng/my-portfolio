@@ -6,6 +6,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiTypescript,
+  SiBootstrap,
   SiNodedotjs,
   SiExpress,
   SiMysql,
@@ -25,6 +26,7 @@ export const skills = {
     { name: "React", icon: SiReact, color: "text-blue-400", level: 60 },
     { name: "Next.js", icon: SiNextdotjs, color: "text-gray-200", level: 60 },
     { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400", level: 80 },
+    { name: "Bootstrap", icon: SiBootstrap, color: "text-purple-600", level: 90 },
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-500", level: 50 },
   ],
   Backend: [
@@ -38,8 +40,8 @@ export const skills = {
     { name: "GitHub", icon: SiGithub, color: "text-white", level: 70 },
   ],
   Design: [
-    { name: "Figma", icon: SiFigma, color: "text-pink-400", level: 80 },
     { name: "Photoshop", icon: SiAdobephotoshop, color: "text-blue-400", level: 90 },
     { name: "Illustrator", icon: SiAdobeillustrator, color: "text-yellow-500", level: 90 },
+    { name: "Figma", icon: SiFigma, color: "text-pink-400", level: 80 },
   ],
 };

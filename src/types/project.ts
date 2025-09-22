@@ -6,4 +6,5 @@ export type Project = {
   thumbnailUrl?: string;
   demoUrl?: string;
   repoUrl?: string;
+  pdfUrl?: string;
 };

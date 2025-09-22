@@ -1,0 +1,1301 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@keyframes float {
+  0% {
+    transform: rotateY(-3deg);
+  }
+  
+  50% {
+    transform: rotateY(3deg);
+  }
+  
+  100% {
+    transform: rotateY(-3deg);
+  }
+}
+@keyframes blink {
+  0% {
+    filter: brightness(1);
+  }
+  5% {
+    filter: brightness(3);
+  }
+  10% {
+    filter: brightness(1);
+    
+  }
+  15% {
+    filter: brightness(2);
+  }
+  20% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1);
+    
+  }
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: calc(100vh + 60px);
+  /*background: #222222;*/
+  background-color: #ed1c24;
+  /*background: #a51620;*/
+  z-index: 999;
+  position: fixed;
+  top: -60px;
+}
+.loader {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: -100px;
+}
+.loader span {
+  display: block;
+  width: 200px;
+  height: 50px;
+  color: #ff858a;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  margin-top: 50px;
+  left: 50%;
+  margin-left: -100px;
+  font-size: 18px;
+  font-family: "Roboto", 'cwTeXYen', sans-serif;
+  letter-spacing: 18px;
+}
+.loader-2 {
+  width: 8px;
+  height: 8px;
+  /*margin: 40px auto;*/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -4px;
+  opacity: 1;
+  border-radius: 50%;
+  box-shadow:
+    0 -14px 0 rgba(255,255,255,0.8),
+    10px -10px 0 rgba(255,255,255,0.7),
+    14px 0px 1px rgba(255,255,255,0.6),
+    10px 10px 1px rgba(255,255,255,0.5),
+    0px 14px 2px rgba(255,255,255,0.4),
+    -10px 10px 2px rgba(255,255,255,0.3),
+    -14px 0px 3px rgba(255,255,255,0.2),
+    -10px -10px 3px rgba(255,255,255,0.1);
+  transform-origin: 50%;
+  animation: load 0.5s steps(8, end) infinite;
+}
+
+@keyframes load {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+.loader-wrapper span {
+  display: block;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  margin-top: 35px;
+  left: 50%;
+  margin-left: -100px;
+  font-size: 12px;
+  font-family: "Roboto", 'cwTeXYen', sans-serif;
+  letter-spacing: 2px;
+}
+svg {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  /*margin: 20px;*/
+}
+
+html, body {
+  margin: 0;
+  font-family: "Roboto", 'cwTeXYen', sans-serif;
+  
+  /*background: #ed1c24;*/
+  background-color: #222;
+  cursor: url(../images/default.png?v22), default;
+  width: 100%;
+  height: 100%;
+}
+body.tored {
+  background-color: #ed1c24;
+  transition: background-color 500ms linear;
+}
+.sky {
+  width: 100%;
+  height: 800px;
+  position: fixed;
+  background: #fff48d;
+  z-index: 0;
+  top: 0;
+  left: 0;
+
+}
+.sun {
+  width: 204px;
+  height: 204px;
+  position: fixed;
+  background: url(../images/sun.png?v22);
+  top: 0px;
+  left: 50%;
+  margin-left: -102px;
+  z-index: 0;
+}
+.cloud-1 {
+  width: 98px;
+  height: 61px;
+  position: fixed;
+  background: url(../images/cloud.png?v22);
+  top: 30px;
+  left: 50%;
+  margin-left: 700px;
+  z-index: 0;
+  animation: float 20s linear infinite;
+  animation-delay: 1s;
+  opacity: 0;
+}
+@keyframes float {
+  0% { transform: translateX(0px); opacity: 0; }
+  5% { transform: translateX(0px); opacity: 1; }
+  to { transform: translateX(-1500px); opacity: 1; }
+}
+.cloud-2 {
+  width: 98px;
+  height: 61px;
+  position: fixed;
+  background: url(../images/cloud.png?v22);
+  top: 30px;
+  left: 50%;
+  margin-left: 700px;
+  z-index: 0;
+  animation: float 20s linear infinite;
+  animation-delay: 10s;
+  opacity: 0;
+}
+.carpet {
+  width: 2560px;
+  height: 300px;
+  position: fixed;
+  background: url(../images/carpet.png?v22);
+  background-size: contain;
+  top: 840px;
+  left: 50%;
+  margin-left: -1280px;
+  z-index: 2;
+}
+.dog-1-wrapper {
+  width: 638px;
+  height: 635px;
+  position: fixed;
+  top: 385px;
+  left: 50%;
+  margin-left: -319px;
+  animation-delay: 0s;
+  z-index: 12;
+}
+.dog-1 {
+  width: 638px;
+  height: 635px;
+  position: absolute;
+  background: url(../images/dog-1.png?v22);
+  background-size: contain;
+  top: 0;
+  left: 0;
+  cursor: url(../images/pointer.png?v22), pointer;
+  
+}
+.gold-back {
+  width: 702px;
+  height: 225px;
+  position: fixed;
+  background: url(../images/gold-back.png?v22);
+  background-size: contain;
+  top: 750px;
+  left: 50%;
+  margin-left: -430px;
+  z-index: 11;
+  animation-delay: 0.5s;
+}
+.gold-front {
+  width: 1323px;
+  height: 328px;
+  position: fixed;
+  background: url(../images/gold-front.png?v22);
+  background-size: contain;
+  top: 785px;
+  left: 50%;
+  margin-left: -662px;
+  z-index: 13;
+  animation-delay: 0.5s;
+}
+.explosion-left-wrapper {
+  width: 334px;
+  height: 315px;
+  position: fixed;
+  top: 520px;
+  left: 50%;
+  margin-left: -620px;
+  z-index: 15;
+  animation-delay: 1.2s;
+}
+.explosion-left {
+  width: 334px;
+  height: 315px;
+  position: absolute;
+  background: url(../images/explosion-left.png?v22);
+  background-size: contain;
+  top: 0;
+  left: 0;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.explosion-right-wrapper {
+  width: 348px;
+  height: 315px;
+  position: fixed;
+  top: 520px;
+  left: 50%;
+  margin-left: 272px;
+  z-index: 15;
+  animation-delay: 1.2s;
+}
+.explosion-right {
+  width: 348px;
+  height: 315px;
+  position: absolute;
+  background: url(../images/explosion-right.png?v22);
+  background-size: contain;
+  top: 0;
+  left: 0;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.minions {
+  position: fixed;
+  z-index: 14;
+  animation-delay: 0.5s;
+}
+.minion-left-1 {
+  width: 280px;
+  height: 422px;
+  position: fixed;
+  background: url(../images/minion-left-1.png?v22);
+  background-size: contain;
+  top: 600px;
+  left: 50%;
+  margin-left: -850px;
+  z-index: 14;
+  animation: jump 5s ease-in-out infinite;
+}
+.minion-left-2 {
+  width: 244px;
+  height: 383px;
+  position: fixed;
+  background: url(../images/minion-left-2.png?v22);
+  background-size: contain;
+  top: 700px;
+  left: 50%;
+  margin-left: -1000px;
+  z-index: 15;
+  animation: jump 5s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+.minion-left-3 {
+  width: 196px;
+  height: 380px;
+  position: fixed;
+  background: url(../images/minion-left-3.png?v22);
+  background-size: contain;
+  top: 740px;
+  left: 50%;
+  margin-left: -1200px;
+  z-index: 15;
+}
+.minion-right-1 {
+  width: 280px;
+  height: 422px;
+  position: fixed;
+  background: url(../images/minion-right-1.png?v22);
+  background-size: contain;
+  top: 600px;
+  left: 50%;
+  margin-left: 570px;
+  z-index: 14;
+  animation: jump 5s ease-in-out infinite;
+  animation-delay: 1.25s;
+}
+.minion-right-2 {
+  width: 244px;
+  height: 383px;
+  position: fixed;
+  background: url(../images/minion-right-2.png?v22);
+  background-size: contain;
+  top: 700px;
+  left: 50%;
+  margin-left: 756px;
+  z-index: 15;
+  animation: jump 5s ease-in-out infinite;
+  animation-delay: 3.75s;
+}
+.minion-right-3 {
+  width: 196px;
+  height: 380px;
+  position: fixed;
+  background: url(../images/minion-right-3.png?v22);
+  background-size: contain;
+  top: 740px;
+  left: 50%;
+  margin-left: 1004px;
+  z-index: 15;
+}
+@keyframes jump {
+  0% { transform: translateY(0px);}
+  5% { transform: translateY(-20px);}
+  10% { transform: translateY(0px);}
+  15% { transform: translateY(-8px);}
+  20% { transform: translateY(0px);}
+  25% { transform: translateY(0px);}
+  100% { transform: translateY(0px);}
+}
+.flag {
+  width: 2457px;
+  height: 656px;
+  position: fixed;
+  background: url(../images/flag.png?v22);
+  background-size: contain;
+  top: -275px;
+  left: 50%;
+  margin-left: -1228px;
+  z-index: 10;
+}
+.flag-front {
+  width: 660px;
+  height: 148px;
+  position: absolute;
+  background: url(../images/flag-front.png?v22);
+  background-position: 0px 0px;
+  top: 424px;
+  left: 50%;
+  margin-left: -333px;
+  z-index: 11;
+  animation: changebgv 3s steps(1) infinite;
+}
+@keyframes changebgv {
+  0% {
+    background-position: 0px 0px;
+  }
+  20% {
+    background-position: 0px -148px;
+  }
+  40% {
+    background-position: 0px -296px;
+  }
+  60% {
+    background-position: 0px -444px;
+  }
+  80% {
+    background-position: 0px -592px;
+  }
+  100% {
+    background-position: 0px -740px; 
+  }
+  
+}
+.lf-1 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 360px;
+  left: 50%;
+  margin-left: -770px;
+  z-index: 11;
+}
+.lf-2 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 240px;
+  left: 50%;
+  margin-left: -1030px;
+  z-index: 11;
+}
+.rt-1 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 360px;
+  left: 50%;
+  margin-left: 520px;
+  z-index: 11;
+}
+.rt-2 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 240px;
+  left: 50%;
+  margin-left: 780px;
+  z-index: 11;
+}
+.lantern-mid {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: url(../images/pointer.png?v22), pointer;
+  animation-delay: .5s;
+}
+.lantern-inn-1 {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background: url(../images/lantern-1.png?v22);
+  background-position: 0px 0px;
+  top: 0;
+  left: 0;
+  animation: changebg 3s steps(1) infinite;
+}
+.lantern-inn-2 {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background: url(../images/lantern-2.png?v22);
+  background-position: 0px 0px;
+  top: 0;
+  left: 0;
+  animation: changebg 3s steps(1) infinite;
+  animation-delay: 1.5s;
+}
+@keyframes changebg {
+  0% {
+    background-position: 0px 0px;
+  }
+  33% {
+    background-position: -250px 0px; 
+  }
+  66% {
+    background-position: -500px 0px;  
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+.left-firework-out {
+  width: 215px;
+  height: 597px;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  margin-left: -550px;
+  z-index: 11;
+  transform-origin: 50% 15%;
+  cursor: url(../images/pointer.png?v22), pointer;
+  animation-delay: .3s;
+}
+.left-firework {
+  width: 215px;
+  height: 597px;
+  position: absolute;
+  background: url(../images/left-firework.png?v22);
+  background-size: contain;
+  top: 0;
+  left: 0;
+  /*margin-left: -550px;*/
+  /*z-index: 11;*/
+  /*transform-origin: 50% 15%;*/
+  /*cursor: url(../images/pointer.png?v22), pointer;*/
+}
+.right-firework-out {
+  width: 215px;
+  height: 597px;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  margin-left: 330px;
+  z-index: 11;
+  transform-origin: 50% 15%;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.right-firework {
+  width: 215px;
+  height: 597px;
+  position: absolute;
+  background: url(../images/right-firework.png?v22);
+  background-size: contain;
+  top: 0;
+  left: 0;
+  /*margin-left: 330px;
+  z-index: 11;
+  transform-origin: 50% 15%;
+  cursor: url(../images/pointer.png?v22), pointer;*/
+}
+.left-house-1 {
+  width: 844px;
+  height: 1198px;
+  position: fixed;
+  background: url(../images/left-house-1.png?v22);
+  background-size: contain;
+  top: -100px;
+  left: 50%;
+  margin-left: -1300px;
+  z-index: 9;
+}
+.right-house-1 {
+  width: 844px;
+  height: 1198px;
+  position: fixed;
+  background: url(../images/right-house-1.png?v22);
+  background-size: contain;
+  top: -100px;
+  left: 50%;
+  margin-left: 456px;
+  z-index: 9;
+}
+.left-house-2 {
+  width: 555px;
+  height: 725px;
+  position: fixed;
+  background: url(../images/left-house-2.png?v22);
+  background-size: contain;
+  top: 200px;
+  left: 50%;
+  margin-left: -770px;
+  z-index: 8;
+  animation-delay: 0.1s;
+}
+.right-house-2 {
+  width: 555px;
+  height: 725px;
+  position: fixed;
+  background: url(../images/right-house-2.png?v22);
+  background-size: contain;
+  top: 200px;
+  left: 50%;
+  margin-left: 215px;
+  z-index: 8;
+  animation-delay: 0.1s;
+}
+.center-house {
+  width: 1134px;
+  height: 740px;
+  position: fixed;
+  background: url(../images/center-house.png?v22);
+  background-size: contain;
+  top: 200px;
+  left: 50%;
+  margin-left: -567px;
+  z-index: 1;
+  animation-delay: 0.1s;
+}
+.bg-minion-1 {
+  width: 74px;
+  height: 60px;
+  position: fixed;
+  background: url(../images/bg-minion-1.png?v22);
+  background-size: contain;
+  top: 10px;
+  left: 50%;
+  margin-left: -450px;
+  z-index: 0;
+  animation-delay: 1.5s;
+}
+.bg-minion-2 {
+  width: 71px;
+  height: 43px;
+  position: fixed;
+  background: url(../images/bg-minion-2.png?v22);
+  background-size: contain;
+  top: 10px;
+  left: 50%;
+  margin-left: 400px;
+  z-index: 0;
+  animation-delay: 1.6s;
+}
+.bg-minion-3 {
+  width: 43px;
+  height: 77px;
+  position: fixed;
+  background: url(../images/bg-minion-3.png?v22);
+  background-size: contain;
+  top: 400px;
+  left: 50%;
+  margin-left: -300px;
+  z-index: 0;
+  animation-delay: 1.7s;
+}
+.bg-minion-4 {
+  width: 44px;
+  height: 60px;
+  position: fixed;
+  background: url(../images/bg-minion-4.png?v22);
+  background-size: contain;
+  top: 435px;
+  left: 50%;
+  margin-left: 250px;
+  z-index: 0;
+  animation-delay: 1.8s;
+}
+#confetti-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation-delay: 2s;
+}
+.confetti-red {
+  width: 44px;
+  height: 39px;
+  position: absolute;
+  background: url(../images/confetti-red.png?v22);
+}
+.confetti-yellow {
+  width: 43px;
+  height: 32px;
+  position: absolute;
+  background: url(../images/confetti-yellow.png?v22);
+}
+
+
+
+.event-wrapper {
+  width: 100%;
+  /*position: relative;
+  margin: 1240px auto 0;
+  min-height: 2000px;*/
+  height: 7000px;
+  top: 1140px;
+  left: 0;
+  position: absolute;
+  background: url(../images/pattern-1.png?v22) #a51620;
+  z-index: 20;
+  border-top: 10px solid #603813;
+  border-bottom: 10px solid #603813;
+  overflow: hidden;
+  /*box-shadow: 0 -150px 160px rgba(193,39,45,0);
+  transition: box-shadow 1s linear;*/
+}
+/*.event-shadow {
+  box-shadow: 0 -150px 160px rgba(193,39,45,0.5);
+}*/
+.btn-go {
+  width: 694px;
+  height: 225px;
+  position: absolute;
+  bottom: 140px;
+  left: 50%;
+  margin-left: -347px;
+  background: url(../images/btn-go.png?v22);
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.event-carpet .btn-go {
+  bottom: 120px;
+}
+.event-carpet {
+  width: 1960px;
+  height: 2300px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -980px;
+  background: url(../images/event-carpet.png?v22);
+  overflow-x: hidden;
+}
+
+.event-1-bubble {
+  width: 334px;
+  height: 315px;
+  position: absolute;
+  background: url(../images/explosion-left.png?v22);
+  top: 0;
+  left: 50%;
+  margin-left: -670px;
+}
+.event-1-title {
+  width: 627px;
+  height: 133px;
+  position: absolute;
+  background: url(../images/event-1-title.png?v22);
+  top: 70px;
+  left: 50%;
+  margin-left: -300px;
+}
+.dog-2-wrapper {
+  width: 563px;
+  height: 718px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  margin-left: 100px;
+}
+.dog-2 {
+  width: 563px;
+  height: 718px;
+  position: absolute;
+  background: url(../images/dog-2.png?v22);
+  top: 0;
+  left: 0;
+  /*cursor: url(../images/pointer.png?v22), pointer;*/
+  animation: float 3s infinite ease-in-out;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-15px);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.prize-1-text {
+  width: 420px;
+  height: 158px;
+  position: absolute;
+  background: url(../images/prize-1-text.png?v22);
+  top: 350px;
+  left: 50%;
+  margin-left: -650px;
+}
+.prize-2-text {
+  width: 441px;
+  height: 132px;
+  position: absolute;
+  background: url(../images/prize-2-text.png?v22);
+  top: 535px;
+  left: 50%;
+  margin-left: -650px;
+}
+.prize-3-text {
+  width: 432px;
+  height: 165px;
+  position: absolute;
+  background: url(../images/prize-3-text.png?v22);
+  top: 700px;
+  left: 50%;
+  margin-left: -650px;
+}
+.prize-1-icon {
+  width: 238px;
+  height: 171px;
+  position: absolute;
+  background: url(../images/prize-1-icon.png?v22);
+  top: 340px;
+  left: 50%;
+  margin-left: -200px;
+}
+.prize-2-icon {
+  width: 405px;
+  height: 243px;
+  position: absolute;
+  background: url(../images/prize-2-icon.png?v22);
+  top: 500px;
+  left: 50%;
+  margin-left: -250px;
+}
+.prize-3-icon {
+  width: 272px;
+  height: 116px;
+  position: absolute;
+  background: url(../images/prize-3-icon.png?v22);
+  top: 750px;
+  left: 50%;
+  margin-left: -180px;
+}
+.event-1-desc {
+  width: 1250px;
+  height: 945px;
+  background: url(../images/event-1-desc.png?v22);
+  top: 950px;
+  left: 50%;
+  margin-left: -625px;
+  position: absolute;
+}
+.minion-peek-left {
+  width: 249px;
+  height: 362px;
+  position: absolute;
+  background: url(../images/minion-peek-left.png?v22);
+  top: 1200px;
+  left: 50%;
+  margin-left: -774px;
+  animation-duration: .5s;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.minion-peek-right {
+  width: 249px;
+  height: 362px;
+  position: absolute;
+  background: url(../images/minion-peek-right.png?v22);
+  top: 1200px;
+  left: 50%;
+  margin-left: 525px;
+  animation-duration: .5s;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.ingot-1 {
+  width: 154px;
+  height: 137px;
+  position: absolute;
+  background: url(../images/ingot-1.png?v22);
+  top: 1200px;
+  left: 50%;
+  margin-left: -940px;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.ingot-2 {
+  width: 154px;
+  height: 137px;
+  position: absolute;
+  background: url(../images/ingot-2.png?v22);
+  top: 2000px;
+  left: 50%;
+  margin-left: 786px;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.coin {
+  width: 140px;
+  height: 146px;
+  background: url(../images/coin.png?v22);
+  position: absolute;
+  bottom: -50px;
+  right: -40px;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.event-plate {
+  width: 1920px;
+  height: 1927px;
+  position: absolute;
+  top: 2400px;
+  left: 50%;
+  margin-left: -960px;
+  background: url(../images/event-plate.png?v22);
+  overflow-x: hidden;
+}
+.dog-3-wrapper {
+  width: 763px;
+  height: 693px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -700px;
+}
+.dog-3 {
+  width: 763px;
+  height: 693px;
+  background: url(../images/dog-3.png?v22);
+  top: 0;
+  left: 0;
+  /*cursor: url(../images/pointer.png?v22), pointer;*/
+  animation: float 3s infinite ease-in-out; 
+}
+.event-2-bubble {
+  width: 348px;
+  height: 315px;
+  position: absolute;
+  background: url(../images/explosion-right.png?v22);
+  top: 150px;
+  left: 50%;
+  margin-left: 50px;
+}
+.event-firework {
+  width: 277px;
+  height: 528px;
+  position: absolute;
+  background: url(../images/event-firework.png?v22);
+  top: 0px;
+  left: 50%;
+  margin-left: 340px;
+  transform-origin: 50% 15%;
+}
+.event-2-title {
+  width: 539px;
+  height: 299px;
+  position: absolute;
+  background: url(../images/event-2-title.png?v22);
+  top: 500px;
+  left: 50%;
+  margin-left: -50px;
+}
+.event-2-desc {
+  width: 1250px;
+  height: 620px;
+  position: absolute;
+  background: url(../images/event-2-desc.png?v22);
+  top: 860px;
+  left: 50%;
+  margin-left: -625px;
+}
+.vault {
+  width: 2560px;
+  height: 833px;
+  position: absolute;
+  background: url(../images/vault.png?v22);
+  top: 3200px;
+  left: 50%;
+  margin-left: -1280px;
+  z-index: 0;
+}
+.caution-wrapper {
+  width: 100%;
+  height: 1940px;
+  position: absolute;
+  background: url(../images/pineapple-pattern.png?v22) #f9d53d;
+  top: 4400px;
+  left: 0;
+  border-top: 10px solid #603813;
+  border-bottom: 10px solid #603813;
+}
+.caution {
+  width: 1250px;
+  height: 1716px;
+  position: absolute;
+  background: url(../images/caution.png?v22);
+  top: 100px;
+  left: 50%;
+  margin-left: -625px;
+}
+.bottom-logo {
+  width: 907px;
+  height: 382px;
+  background: url(../images/bottom-logo.png?v22);
+  position: absolute;
+  top: 6480px;
+  left: 50%;
+  margin-left: -450px;
+}
+/*.navi {
+  width: 610px;
+  height: 90px;
+  position: fixed;
+  z-index: 9999;
+  background: url(../images/navi.png?v22);
+  top: -10px;
+  left: 50%;
+  margin-left: 0px;
+}*/
+.side-navi {
+  width: 118px;
+  height: 610px;
+  position: fixed;
+  z-index: 900;
+  background: url(../images/side-navi.png?v22);
+  top: 50%;
+  margin-top: -305px;
+  /*right: -10px;*/
+  right: -10px;
+}
+.side-navi.showup {
+  /*right: -10px;*/
+}
+.btn-top {
+  width: 30px;
+  height: 100px;
+  position: absolute;
+  background: url(../images/btn-top.png?v22);
+  top: 26px;
+  left: 58px;
+  opacity: 0;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.btn-event-1 {
+  width: 35px;
+  height: 106px;
+  position: absolute;
+  background: url(../images/btn-event-1.png?v22);
+  top: 158px;
+  left: 55px;
+  opacity: 0;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.btn-event-2 {
+  width: 35px;
+  height: 106px;
+  position: absolute;
+  background: url(../images/btn-event-2.png?v22);
+  top: 302px;
+  left: 55px;
+  opacity: 0;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.btn-caution {
+  width: 35px;
+  height: 136px;
+  position: absolute;
+  background: url(../images/btn-caution.png?v22);
+  top: 441px;
+  left: 55px;
+  opacity: 0;
+  cursor: url(../images/pointer.png?v22), pointer;
+}
+.btn-top:hover,
+.btn-event-1:hover,
+.btn-event-2:hover,
+.btn-caution:hover {
+  opacity: 1;
+}
+
+.dummy {
+  width: 100%;
+  height: 8078px;
+  position: relative;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.flexcontainer {
+  /*height: 100%;*/
+  /*height: 100vh;*/
+  width: 100%;
+  overflow-x: hidden!important;
+  z-index: 20;
+  -webkit-transform: translate3d(0,0,0);
+}
+img {
+  border-radius: 0;
+}
+a {
+  color: #222;
+}
+a:hover {
+  color: #444;
+  text-decoration: underline;
+}
+.img-responsive {
+  width: 100%;
+}
+
+
+
+
+
+
+
+.b-950 {
+  display: block;
+  width: 950px;
+  margin: 0 auto;
+  position: relative;
+}
+.remove-btn {
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  bottom: 88px;
+  right: 0;
+  background: url(../images/remove-btn.png) no-repeat;
+  color: #fff;
+  cursor: pointer;
+}
+.remove-btn:hover {
+  transition: transform .5s;
+  transform: rotate(-90deg);
+}
+@media screen and (max-width: 1400px) {
+  /*.d-left {
+    display: none;
+    }*/
+  /*.d-right {
+    display: none;
+    }*/
+    .d-main {
+      overflow-x: hidden!important;
+    }
+    .logo {
+      /*width: 1200px;*/
+      /*height: 342px;*/
+      width: 86vw;
+      height: calc(86vw*0.285);
+      /*position: absolute;*/
+      position: relative;
+      margin: 5vh auto 0;
+      /*left: 50%;*/
+      /*margin-left: -400px;*/
+      /*margin-left: calc(-46vw/2);*/
+      z-index: 2;
+      perspective: 500px;
+      animation-delay: 1.5s;
+    }
+    .logo .logo-back {
+      /*width: 1200px;*/
+      /*height: 342px;*/
+      /*width: 100%;*/
+      width: 86vw;
+      height: calc(86vw*0.285);
+      background: url(../images/logo-back.png?v22) top center no-repeat;
+      background-size: contain;
+      /*animation: float 2s ease-in-out infinite;*/
+      -webkit-animation: float 3s infinite;
+      animation: float 3s infinite;
+    }
+    .logo .logo-back .logo-front {
+      /*width: 1200px;*/
+      /*height: 342px;*/
+      /*width: 100%;*/
+      width: 86vw;
+      height: calc(86vw*0.285);
+      background: url(../images/logo-front.png?v22) top center no-repeat;
+      background-size: contain;
+      animation: blink 2s infinite;
+    }
+    .date {
+      width: 70vw;
+      height: calc(70vw*0.192);
+      position: relative;
+      margin: 0 auto;
+      background: url(../images/date.png?v22) top center no-repeat;
+      background-size: contain;
+      animation-delay: 2s;
+    }
+    .event-1-badge {
+      width: 40vw;
+      height: calc(40vw*0.73);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: calc(-40vw/2);
+      background: url(../images/event-1.png?v22) top center no-repeat;
+      background-size: contain;
+      animation-delay: 1.7s;
+      z-index: 3;
+    }
+    .tv {
+      width: 50vw;
+      height: calc(50vw*0.855);
+      position: absolute;
+      top: calc(20vw*0.75);
+      left: 50%;
+      margin-left: calc(-50vw/2);
+      /*margin: calc(-8vw*0.75) auto 0;*/
+      background: url(../images/tv.png?v22) top center no-repeat;
+      background-size: contain;
+      animation-delay: 1.8s;
+    }
+    .tv-text {
+      width: 454px;
+      height: 147px;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      margin-left: -227px;
+      background: url(../images/tv-text.png?v22) top center no-repeat;
+      background-size: contain;
+    }
+    .ipad {
+      width: 25vw;
+      height: calc(25vw*1.5425);
+      position: absolute;
+      top: calc(30vw*0.75);
+      left: 0;
+      background: url(../images/ipad.png?v22) top center no-repeat;
+      background-size: contain;
+      animation-delay: 1.9s;
+    }
+    .ipad-text {
+      width: 100%;
+      padding-bottom: 39%;
+      position: absolute;
+      top: 70%;
+      left: 0;
+
+      background: url(../images/ipad-text.png?v22) top center no-repeat;
+      background-size: contain;
+    }
+    .coupon {
+      width: 25vw;
+      height: calc(25vw*0.633);
+      position: absolute;
+      top: calc(55vw*0.75);
+      right: 0;
+      background: url(../images/coupon.png?v22) top center no-repeat;
+      background-size: contain;
+      animation-delay: 2s;
+    }
+    .coupon-text {
+      width: 100%;
+      padding-bottom: 38.68%;
+      position: absolute;
+      top: 60%;
+      left: 0;
+      background: url(../images/coupon-text.png?v22) top center no-repeat;
+      background-size: contain;
+    }
+    .event-1 {
+      width: 1200px;
+
+      position: relative;
+      margin: 0 auto;
+      /*min-height: 35vw;*/
+      padding-top: 60vw;
+    }
+    .event-2 {
+      width: 1200px;
+      position: relative;
+      margin: 10vw auto;
+      /*height: 30vw;*/
+      padding-top: 50vw;
+    }
+    .event-2-badge {
+      width: 40vw;
+      height: calc(40vw*0.75);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: calc(-40vw/2);
+      background: url(../images/event-2.png?v22) top center no-repeat;
+      background-size: contain;
+      /*animation-delay: 1.7s;*/
+      z-index: 3;
+    }
+
+    .event-2-text {
+      width: 60vw;
+      height: calc(60vw*0.3646);
+      position: absolute;
+      top: calc(40vw*0.73);
+      left: 50%;
+      margin-left: calc(-60vw/2);
+      background: url(../images/event-2-text.png?v22) top center no-repeat;
+      background-size: contain;
+      z-index: 3;
+
+    }
+  }
+
+

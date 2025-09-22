@@ -1,0 +1,864 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400');
+
+body {
+  
+  background: url(../images/bg.png) #fef3e7 no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 0%;
+  background-size: 100% auto;
+  position: static;
+  font-family: 'Century Gothic' , 'Noto Sans TC', 'Microsoft JhengHei';
+  font-weight: 400;
+  overflow-x: hidden!important;
+  
+}
+.default-top {
+  transition: all 0.2s ease-in;
+  background-color: transparent;
+}
+.default-top.notontop {
+  background-color: rgba(244, 88, 88, 0.95);
+}
+.default-footer {
+  background-color: rgba(244, 88, 88, 0.95);
+}
+canvas {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.ballimg {
+  display: none;
+}
+.wrap-left {
+  width: 680px;
+  min-height: 3800px;
+  position: absolute;
+  left: 50%;
+  margin-left: -1280px;
+}
+.wrap-right {
+  width: 680px;
+  min-height: 3800px;
+  position: absolute;
+  left: 50%;
+  margin-left: 600px;
+}
+.wrap-center {
+  width: 1240px;
+  position: relative;
+  margin: 0 auto;
+  pointer-events: none;
+  z-index: 1;
+}
+.grid-group-wrapper {
+  width: 100%;
+  background: url(../images/pattern.png) rgba(255, 146, 146, 0.95);
+  border: 5px solid #734b23;
+  border-radius: 2rem;
+  margin: 40px auto;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  padding: 5px;
+}
+.grid-group {
+  pointer-events: auto;
+}
+
+
+
+
+#logo {
+  width: 800px;
+  height: 420px;
+  position: relative;
+  margin: 0px auto;
+  /*margin-bottom: calc(100vh - 480px);*/
+  /*pointer-events: auto;*/
+  animation-delay: 1.5s;
+  overflow: visible;
+  z-index: 99;
+}
+#cat-ball {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  background: url(../images/cat-ball.png);
+  animation-delay: 3s;
+}
+
+#img-logo {
+  width: 800px;
+  height: 420px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/logo.png) no-repeat;
+}
+#img-logo.fiveday {
+  background: url(../images/logo-fiveday.png) no-repeat;
+}
+#img-logo.fourday {
+  background: url(../images/logo-fourday.png) no-repeat;
+}
+#img-logo.threeday {
+  background: url(../images/logo-threeday.png) no-repeat;
+}
+#img-logo.twoday {
+  background: url(../images/logo-twoday.png) no-repeat;
+}
+#img-logo.oneday {
+  background: url(../images/logo-oneday.png) no-repeat;
+}
+
+
+.subtitle {
+  width: 800px;
+  height: 100px;
+  position: relative;
+  background: url(../images/subtitle.png?v1) no-repeat;
+  margin: 0 auto;
+}
+.board {
+  width: 1240px;
+  position: relative;
+  margin: 20px auto;
+  animation: boardInUp .5s ease-in forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.left-board {
+  width: 360px;
+  height: 216px;
+  position: relative;
+  background: url(../images/left-board.png) no-repeat;
+  cursor: pointer;
+  pointer-events: auto;
+  margin: 0 10px;
+}
+.btn-login {
+  width: 360px;
+  height: 216px;
+  position: relative;
+  background: url(../images/btn-login.png) no-repeat;
+  cursor: pointer;
+  pointer-events: auto;
+  margin: 0 10px;
+}
+.btn-login.clickme {
+  background: url(../images/btn-clickme.png) no-repeat;
+}
+.btn-login.tomorrow {
+  background: url(../images/btn-tomorrow.png) no-repeat;
+  pointer-events: none;
+}
+.right-board {
+  width: 360px;
+  height: 216px;
+  position: relative;
+  background: url(../images/right-board.png) no-repeat;
+  cursor: pointer;
+  pointer-events: auto;
+  margin: 0 10px;
+}
+.left-board:hover,
+.btn-login:hover,
+.right-board:hover {
+  background-position: 0 -216px;
+}
+.left-board:active,
+.btn-login:active,
+.right-board:active {
+  transform: translateY(8px)!important;
+}
+@keyframes boardInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.side-bar{
+  width: 150px;
+  height: 450px;
+  position: fixed;
+  right: 40px;
+  top: 60px;
+}
+.btn-join,
+.btn-detail,
+.btn-shopping {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform .25s ease-in;
+}
+.btn-shopping {
+  height: 180px;
+}
+.btn-join:hover,
+.btn-detail:hover,
+.btn-shopping:hover {
+  transform: scale(0.95);
+}
+.btn-join:active,
+.btn-detail:active,
+.btn-shopping:active {
+  transform: translateY(5px);
+}
+.btn-join {  background: url(../images/btn-join.png) no-repeat;}
+.btn-detail {  background: url(../images/btn-detail.png) no-repeat;}
+.btn-shopping {  background: url(../images/btn-shopping.png) no-repeat;}
+
+
+#game-zone {
+  margin: 0 auto;
+  position: relative;
+  background: rgba(255, 187, 187, 0);
+  border: 0px solid #734b23;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0);
+  pointer-events: none;
+  border-radius: 24px;
+  transition: all 0.25s ease-in;
+  opacity: 0;
+  transform: scale(0);
+  height: 0;
+}
+#game-zone.on {
+  opacity: 1;
+  transform: scale(1);
+  height: auto;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+}
+.machine {
+  width: 400px;
+  height: 640px;
+  position: relative;
+  background: url(../images/machine.png) no-repeat;
+  margin: 0 auto;
+  pointer-events: auto;
+}
+.turn-table {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  background: url(../images/turn-table.png) no-repeat;
+  bottom: 70px;
+  right: 70px;
+}
+.turn-table.turning {
+  animation: turning 1s ease-in forwards;
+}
+@keyframes turning {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pickup-hole {
+  width: 110px;
+  height: 140px;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  bottom: 55px;
+  left: 55px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#gachapon {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -100px;
+  left: 5px;
+}
+.ball-1 { background: url(../images/ball_1.png); }
+.ball-2 { background: url(../images/ball_2.png); }
+.ball-3 { background: url(../images/ball_3.png); }
+.ball-4 { background: url(../images/ball_4.png); }
+.ball-5 { background: url(../images/ball_5.png); }
+
+.ball-6 { background: url(../images/ball_6.png); }
+.ball-7 { background: url(../images/ball_7.png); }
+.ball-8 { background: url(../images/ball_8.png); }
+.ball-9 { background: url(../images/ball_9.png); }
+.ball-10 { background: url(../images/ball_10.png); }
+
+#gachapon.dropping {
+  animation: dropping .3s ease-in forwards;
+  
+}
+@keyframes dropping {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(140px);
+  }
+}
+
+#btn-gacha {
+  width: 360px;
+  height: 160px;
+  position: relative;
+  background: url(../images/btn-gacha.png) no-repeat;
+  margin: 20px auto;
+  pointer-events: auto;
+  cursor: pointer;
+}
+#btn-gacha:hover {
+  background-position: 0 -160px;
+}
+#btn-gacha:active {
+  transform: translateY(10px);
+}
+
+
+
+
+
+
+
+
+.delay-01s {  animation-delay: .1s!important;}
+.delay-02s {  animation-delay: .2s!important;}
+.delay-03s {  animation-delay: .3s!important;}
+.delay-04s {  animation-delay: .4s!important;}
+.delay-05s {  animation-delay: .5s!important;}
+
+
+
+
+
+
+.prize-100 {  background: url(../images/prize-100.png) center top no-repeat;}
+.prize-200 {  background: url(../images/prize-200.png) center top no-repeat;}
+.prize-300 {  background: url(../images/prize-300.png) center top no-repeat;}
+.prize-gg-1 {  background: url(../images/prize-gg-1.png) center top no-repeat;}
+.prize-gg-2 {  background: url(../images/prize-gg-2.png) center top no-repeat;}
+
+
+
+#btn-ok {
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  background: url(../images/btn-ok.png) no-repeat;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -150px;
+  cursor: pointer;
+}
+#btn-ok:hover {
+  background-position: 0 -100px;
+}
+
+
+.detail {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 5px solid #734b23;
+  border-radius: 2rem;
+  margin: 40px auto;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.detail ul li,
+.detail ol li {
+  line-height: 2rem;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+.detail ol li a {
+  color: #ff0000;
+}
+
+
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 600px!important;
+  max-width: 600px!important;
+  background: transparent;
+}
+.modal-content {
+  width: 600px;
+  height: 400px;
+  box-shadow: none!important;
+  position: relative;
+  color: #333;
+  background-color: transparent;
+  padding: 20px;
+}
+.modal-body {
+  z-index: 0;
+}
+.modal-backdrop {
+     background-color: rgba(0,0,0,1) !important;
+     opacity: 0.75!important;
+}
+
+
+.item {
+  box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0);
+}
+
+
+
+
+
+
+
+
+.scrollToTop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 1%;
+  margin-bottom: 2.5%;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  transform-origin: 100% 100%;
+}
+.scrollToTop:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.6%;
+}
+.scrollToTop:active {
+  margin-bottom: 2.4%;
+}
+
+@media screen and (max-width: 1240px) {
+
+  body {
+  
+    background: url(../images/bg.png) #fef3e7 no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 0%;
+    background-size: 200% auto;
+    
+    font-family: 'Century Gothic' , 'Noto Sans TC', 'Microsoft JhengHei';
+    font-weight: 400;
+    overflow-x: hidden!important;
+    
+  }
+  #landing {
+    /*min-height: 100vh;*/
+  }
+  canvas {
+    width: 100vw;
+    /*height: 900px;*/
+    height: 100vw;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: fixed;
+    top: initial;
+    bottom: 0;
+    left: 0;
+  }
+  .wrap-left {
+    display: none;
+  }
+  .wrap-right {
+    display: none;
+  }
+  .wrap-center {
+    overflow-x: hidden!important;
+    
+  }
+  .grid-group-wrapper {
+    width: 100%;
+    background: rgba(255, 146, 146, 0.95);
+    border: 5px solid #734b23;
+    border-radius: 2rem;
+    margin: 40px auto;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+
+
+  .i-feature {
+    font-size: 40px;
+  }
+  .i-name {
+    height: 100px;
+  }
+  .i-image a img {
+    width: 100%;
+  }
+  .i-name-b, .i-name-n {
+    font-size: 40px;
+  }
+  .i-original {
+    font-size: 40px;
+  }
+  .i-price {
+    font-size: 72px;
+  }
+  .scrollToTop {
+    transform: scale(3);
+  }
+
+  #game-zone {
+    margin: 0 auto;
+    position: relative;
+    background: rgba(255, 187, 187, 0);
+    border: 0px solid #734b23;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0);
+    pointer-events: none;
+    border-radius: 24px;
+    transition: all 0.25s ease-in;
+    opacity: 0;
+    transform: scale(0);
+    height: 0;
+  }
+  #game-zone.on {
+    opacity: 1;
+    transform: scale(1);
+    height: auto;
+    padding: 10px 20px;
+    margin-bottom: calc(100vh - 1640px);
+    margin-top: 150px;
+  }
+  .machine {
+    width: 800px;
+    height: 1280px;
+    position: relative;
+    background: url(../images/machine.png) no-repeat;
+    background-size: contain;
+
+    margin: 0 auto;
+    pointer-events: auto;
+  }
+  .turn-table {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    background: url(../images/turn-table.png) no-repeat;
+    background-size: contain;
+    bottom: 140px;
+    right: 140px;
+  }
+  .turn-table.turning {
+    animation: turning 1s ease-in forwards;
+  }
+  @keyframes turning {
+    0% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(180deg);
+    }
+    60% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .pickup-hole {
+    width: 220px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 110px;
+    left: 110px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  #gachapon {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -200px;
+    left: 10px;
+    background-size: contain;
+  }
+  .ball-1 { background: url(../images/ball_1.png); }
+  .ball-2 { background: url(../images/ball_2.png); }
+  .ball-3 { background: url(../images/ball_3.png); }
+  .ball-4 { background: url(../images/ball_4.png); }
+  .ball-5 { background: url(../images/ball_5.png); }
+
+  .ball-6 { background: url(../images/ball_6.png); }
+  .ball-7 { background: url(../images/ball_7.png); }
+  .ball-8 { background: url(../images/ball_8.png); }
+  .ball-9 { background: url(../images/ball_9.png); }
+  .ball-10 { background: url(../images/ball_10.png); }
+
+  #gachapon.dropping {
+    animation: dropping .3s ease-in forwards;
+    
+  }
+  @keyframes dropping {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(280px);
+    }
+  }
+
+  #btn-gacha {
+    width: 720px;
+    height: 320px;
+    position: relative;
+    background: url(../images/btn-gacha.png) no-repeat;
+    background-size: 100% auto;
+    margin: 20px auto;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  #btn-gacha:hover {
+    background-position: 0 -320px;
+  }
+  #btn-gacha:active {
+    transform: translateY(10px);
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 900px!important;
+    max-width: 900px!important;
+    background: transparent;
+  }
+  .modal-content {
+    width: 900px;
+    height: 600px;
+    box-shadow: none!important;
+    position: relative;
+    color: #333;
+    background-color: transparent;
+    padding: 20px;
+    background-size: contain;
+  }
+  #btn-ok {
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    background: url(../images/btn-ok.png) no-repeat;
+    background-size: 100% auto;
+    bottom: -120px;
+    left: 50%;
+    margin-left: -300px;
+    cursor: pointer;
+  }
+  #btn-ok:hover {
+    background-position: 0 -200px;
+  }
+  h2 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+  .detail {
+    width: 1200px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 5px solid #734b23;
+    border-radius: 2rem;
+    margin: 40px auto;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.3);
+    pointer-events: auto;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  .detail ul li,
+  .detail ol li {
+    line-height: 4rem;
+    font-size: 2.5rem;
+    text-align: justify;
+  }
+  .detail ol li a {
+    color: #ff0000;
+  }
+  #logo {
+    width: 1200px;
+    height: 630px;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 15vh;
+    /*margin-bottom: calc(100vh - 480px);*/
+    /*pointer-events: auto;*/
+    animation-delay: 1.5s;
+    overflow: visible;
+    z-index: 99;
+  }
+  #cat-ball {
+    width: 330px;
+    height: 330px;
+    position: absolute;
+    top: 15px;
+    right: 90px;
+    background: url(../images/cat-ball.png);
+    background-size: contain;
+    animation-delay: 3s;
+  }
+
+  #img-logo {
+    width: 1200px;
+    height: 630px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+  }
+  #img-logo.fiveday {
+    background: url(../images/logo-fiveday.png) no-repeat;
+    background-size: contain;
+  }
+
+
+  .subtitle {
+    width: 1200px;
+    height: 150px;
+    position: relative;
+    background: url(../images/subtitle.png?v1) no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+  }
+  .board {
+    width: 1240px;
+    position: relative;
+    margin: 20px auto;
+    animation: boardInUp .5s ease-in forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+  .left-board {
+    width: 600px;
+    height: 360px;
+    position: relative;
+    background: url(../images/left-board.png) no-repeat;
+    background-size: 100% auto;
+    cursor: pointer;
+    pointer-events: auto;
+    margin: 0 10px;
+  }
+  .btn-login {
+    width: 1200px;
+    height: 200px;
+    position: relative;
+    background: url(../images/btn-login-m.png) no-repeat;
+    background-size: 100% auto;
+    cursor: pointer;
+    pointer-events: auto;
+    margin: 20px 10px;
+  }
+  .btn-login.clickme {
+    background: url(../images/btn-clickme-m.png) no-repeat;
+  }
+  .btn-login.tomorrow {
+    background: url(../images/btn-tomorrow-m.png) no-repeat;
+    pointer-events: none;
+  }
+  .right-board {
+    width: 600px;
+    height: 360px;
+    position: relative;
+    background: url(../images/right-board.png) no-repeat;
+    background-size: 100% auto;
+    cursor: pointer;
+    pointer-events: auto;
+    margin: 0 10px;
+  }
+  .left-board:hover,
+  .btn-login:hover,
+  .right-board:hover {
+    background-position: 0 -360px;
+  }
+  .btn-login:hover {
+   background-position: 0 -200px; 
+  }
+  .left-board:active,
+  .btn-login:active,
+  .right-board:active {
+    transform: translateY(8px)!important;
+  }
+  @keyframes boardInUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  .side-bar{
+    width: 1200px;
+    height: 360px;
+    position: absolute;
+    right: 20px;
+    top: 90px;
+  }
+  .side-bar.playing {
+    display: none!important;
+  }
+  .btn-join,
+  .btn-detail,
+  .btn-shopping {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform .25s ease-in;
+    background-size: contain;
+  }
+  .btn-shopping {
+    height: 360px;
+  }
+}

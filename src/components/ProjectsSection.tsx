@@ -44,8 +44,12 @@ export default function ProjectsSection() {
     >
       <div className="container mx-auto max-w-6xl px-6">
         <h2 className="text-3xl font-bold mb-6">專案 <span className="text-teal-500">Projects</span></h2>
-        <p className="text-gray-300 mb-6 md:mb-3">在 ViVa TV 電商網站 與 ViVa TV 線上客服系統 這兩個專案中，我主要負責介面構思、視覺設計與前端靜態頁面實作。</p>
-        <p className="text-gray-300 mb-6">在電商網站部分，我負責全部介面規劃及頁面切版，確保頁面結構清晰並符合使用者體驗；而在客服系統專案中，則專注於即時聊天與報表頁面的互動設計，為後續的系統串接與功能實現奠定基礎。</p>
+        <p className="text-lg text-gray-300 mb-6 md:mb-3">在 ViVa TV 電商網站 與 ViVa TV 線上客服系統 這兩個專案中，我主要負責<span className="font-semibold underline mx-1">介面構思、視覺設計與前端靜態頁面實作</span>。</p>
+        <ul className="list-disc text-gray-400 mb-6 ps-4">
+          <li>電商網站：全站頁面規劃及設計，並以Bootstrap框架為基礎進行手刻切版</li>
+          <li>客服系統：即時聊天與報表頁面規劃及設計，同樣以Bootstrap框架為基礎進行手刻切版，報表呈現使用DataTables套件</li>
+        </ul>
+
         <div ref={containerRef} className="grid sm:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <motion.div

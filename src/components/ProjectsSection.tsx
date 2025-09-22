@@ -44,7 +44,7 @@ export default function ProjectsSection() {
     >
       <div className="container mx-auto max-w-6xl px-6">
         <h2 className="text-3xl font-bold mb-6">專案 <span className="text-teal-500">Projects</span></h2>
-        <p className="text-lg text-gray-300 mb-6 md:mb-3">在 ViVa TV 電商網站 與 ViVa TV 線上客服系統 這兩個專案中，我主要負責<span className="font-semibold underline mx-1">介面構思、視覺設計與前端靜態頁面實作</span>。</p>
+        <p className="text-lg text-gray-300 mb-6 md:mb-3">在 ViVa TV 電商網站 與 ViVa TV 線上客服系統 這兩個專案中，我主要負責<span className="text-teal-500 font-semibold mx-1">介面構思、視覺設計與前端靜態頁面實作</span>。</p>
         <ul className="list-disc text-gray-400 mb-6 ps-4">
           <li>電商網站：全站頁面規劃及設計，並以Bootstrap框架為基礎進行手刻切版</li>
           <li>客服系統：即時聊天與報表頁面規劃及設計，同樣以Bootstrap框架為基礎進行手刻切版，報表呈現使用DataTables套件</li>

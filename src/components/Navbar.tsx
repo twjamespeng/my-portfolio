@@ -12,20 +12,26 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold">
+          <Link href="/" className="text-2xl">
             James<span className="text-teal-500 pl-1">Peng</span>
           </Link>
 
           {/* Menu (Desktop) */}
           <div className="hidden md:flex space-x-6">
+            <Link href="#about" className="hover:text-teal-500">
+              About
+            </Link>
             <Link href="#projects" className="hover:text-teal-500">
               Projects
             </Link>
             <Link href="#campaigns" className="hover:text-teal-500">
               Campaigns
             </Link>
-            <Link href="#about" className="hover:text-teal-500">
-              About
+            <Link href="#events" className="hover:text-teal-500">
+              Events
+            </Link>
+            <Link href="#designs" className="hover:text-teal-500">
+              Designs
             </Link>
             <Link href="#contact" className="hover:text-teal-500">
               Contact
@@ -75,7 +81,7 @@ export default function Navbar() {
               }}
               className="flex flex-col items-center space-y-8"
             >
-              {["Projects", "Campaigns", "About", "Contact"].map((item) => (
+              {["About", "Projects", "Campaigns", "Events", "Designs", "Contact"].map((item) => (
                 <motion.div
                   key={item}
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}

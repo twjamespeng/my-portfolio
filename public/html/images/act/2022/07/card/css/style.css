@@ -1,0 +1,598 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+:root {
+  --animate-delay: 0.5s;
+}
+
+body {
+  
+  background: url(../images/bg.png) #ffeee7 no-repeat;
+  /*background: #ffeee7;*/
+  background-attachment: fixed;
+  background-position: 50% 100%;
+  background-size: auto 100%;
+  position: static;
+  font-family: 'Century Gothic' , 'Noto Sans TC', 'Microsoft JhengHei', 'Exo', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden!important;
+
+  --bs-secondary: #fc9470;
+  --bs-secondary-rgb: 252,148,112;
+  --bs-btn-border-width: 2px;
+  --bs-border-color-translucent: #a67c52;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-size: 100% 100%;
+  }
+}
+
+button[data-cake-shape="round"] {
+  background: url(../images/bg-round.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+button[data-cake-shape="heart"] {
+  background: url(../images/bg-heart.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+button[data-cake-shape="square"] {
+  background: url(../images/bg-square.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+
+button[data-cake-flavor="chocolate"] {
+  background: url(../images/bg-chocolate.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+button[data-cake-flavor="strawberry"] {
+  background: url(../images/bg-strawberry.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+button[data-cake-flavor="cheese"] {
+  background: url(../images/bg-cheese.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+
+button[data-card-style="card-party"] {
+  background: url(../images/bg-party.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+button[data-card-style="card-night"] {
+  background: url(../images/bg-night.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+button[data-card-style="card-beach"] {
+  background: url(../images/bg-beach.png) no-repeat;
+  background-size: auto 80%;
+  background-position: 5% 50%;
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #fc9470;
+  --bs-btn-border-color: #fc9470;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ffb19c;
+  --bs-btn-hover-border-color: #ffb19c;
+  --bs-btn-focus-shadow-rgb: 130,138,145;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #e5785c;
+  --bs-btn-active-border-color: #e5785c;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #fc9470;
+  --bs-btn-disabled-border-color: #fc9470;
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: #fc9470;
+  --bs-btn-border-color: #fc9470;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #fc9470;
+  --bs-btn-hover-border-color: #fc9470;
+  --bs-btn-focus-shadow-rgb: 108,117,125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #fc9470;
+  --bs-btn-active-border-color: #fc9470;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fc9470;
+  --bs-btn-disabled-bg: transparent;
+  --bs-gradient: none;
+}
+
+.modal {
+  --bs-modal-zindex: 1055;
+  --bs-modal-width: 500px;
+  --bs-modal-padding: 1rem;
+  --bs-modal-margin: 0.5rem;
+  --bs-modal-color: ;
+  --bs-modal-bg: #fff;
+  --bs-modal-border-color: var(--bs-border-color-translucent);
+  --bs-modal-border-width: 4px;
+  --bs-modal-border-radius: 2rem;
+  --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.75);
+  --bs-modal-inner-border-radius: calc(0.5rem - 1px);
+  --bs-modal-header-padding-x: 1rem;
+  --bs-modal-header-padding-y: 1rem;
+  --bs-modal-header-padding: 1rem 1rem;
+  --bs-modal-header-border-color: var(--bs-border-color);
+  --bs-modal-header-border-width: 1px;
+  --bs-modal-title-line-height: 1.5;
+  --bs-modal-footer-gap: 0.5rem;
+  --bs-modal-footer-bg: ;
+  --bs-modal-footer-border-color: var(--bs-border-color);
+  --bs-modal-footer-border-width: 1px;
+}
+
+.modal-backdrop {
+  --bs-backdrop-zindex: 1050;
+  /*--bs-backdrop-bg: #fc9470;*/
+  --bs-backdrop-bg: #fff;
+  --bs-backdrop-opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-backdrop-zindex);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bs-backdrop-bg);
+}
+
+h5.modal-title {
+  color: #a67c52;
+}
+
+.btn {
+  font-size: 1.25rem;
+  --bs-btn-border-width: 2px;
+}
+
+.default-top {
+  transition: all 0.2s ease-in;
+  background-color: transparent;
+}
+.default-top.notontop {
+  background-color: rgba(244, 88, 88, 0.95);
+}
+.default-footer {
+  background-color: rgba(244, 88, 88, 0.95);
+}
+
+footer.p-3.bg-dark-theme.text-center.text-white.position-relative {
+  display: none!important;
+}
+
+
+.area{
+    /*background: #ffeee7;  */
+    /*background: -webkit-linear-gradient(to left, #ffdfd4, #ffdfd4);*/
+    width: 100%;
+    /*height:100vh;*/
+    min-height: calc(100vh - 48px);
+    position: absolute;
+    top: 48px;
+    left: 0;
+}
+.area:before {
+  content: '';
+  display: none;
+  /*width: calc(100% - 40px);
+  height: calc(100vh - 40px);*/
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  pointer-events: none;
+  /*border: 2px solid #fc9470;*/
+  box-shadow: 0 0 0px 2px #fc9470;
+}
+@media (min-width: 1200px) {
+  .area:before {
+    content: '';
+    display: block;
+    /*width: calc(100% - 40px);
+    height: calc(100vh - 40px);*/
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    pointer-events: none;
+    /*border: 2px solid #fc9470;*/
+    box-shadow: 0 0 0px 2px #fc9470;
+  }
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 179, 146, 0.75);
+    /*background-image: url(../images/cake.png);
+    background-size: contain;*/
+
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1500px) rotate(720deg);
+        opacity: 0;
+        border-radius: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Landing {
+  
+  /*padding-top: 80px;*/
+}
+@media (min-width: 1200px) {
+  #Landing {
+    padding-top: 0;
+    min-height: calc(100vh - 48px);
+  }  
+}
+button {
+  box-shadow: none!important;
+}
+#btnPlay,
+#btnShopping,
+#btnGacha,
+#btnLogin {
+  z-index: 999;
+  pointer-events: auto;
+}
+#btnShopping {
+  display: none;
+
+}
+#btnGacha,
+#btnOk {
+  
+  transform: translateY(-20%);
+}
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+  pointer-events: none;
+  opacity: 1;
+  filter: grayscale(100%) brightness(150%);
+}
+
+
+
+
+.ballimg {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1200px) {
+  .ballimg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+#logo {
+  width: 800px;
+  height: 420px;
+  position: relative;
+  margin: 0px auto;
+  
+  animation-delay: 1.5s;
+  overflow: visible;
+  z-index: 99;
+}
+
+
+
+
+
+#Game {
+  margin: 0 auto;
+  position: relative;
+  background: rgba(255, 187, 187, 0);
+  border: 0px solid #734b23;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0);
+  pointer-events: none;
+  border-radius: 24px;
+  transition: all 0.25s ease-in;
+  opacity: 0;
+  transform: scale(0);
+  height: 0;
+
+}
+#Game.on {
+  opacity: 1;
+  transform: scale(1);
+  height: auto;
+  /*margin-bottom: 40px;*/
+}
+#Game.on > .d-flex {
+  min-height: calc(100vh - 46px);
+}
+.machine {
+  pointer-events: none;
+  padding-top: 20px;
+}
+.turn-table {
+  width: 27.5%;
+  position: absolute;
+  background-size: 100%;
+  bottom: 13%;
+  right: 17.5%;
+}
+@media (min-width: 1200px) {
+  .turn-table {
+    bottom: 11.5%;
+  }  
+}
+.turn-table.turning {
+  animation: turning 1s ease-in forwards;
+}
+@keyframes turning {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pickup-hole {
+  width: 27.5%;
+  
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  bottom: 9.1666%;
+  left: 13.75%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#gachaBall {
+  
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  transform: translateY(-100%);
+  transform-origin: 50% 100%;
+}
+.ball-1 { background: url(../images/ball_1.png); }
+.ball-2 { background: url(../images/ball_2.png); }
+.ball-3 { background: url(../images/ball_3.png); }
+.ball-4 { background: url(../images/ball_4.png); }
+.ball-5 { background: url(../images/ball_5.png); }
+
+.btn-detail {
+  width: 50px;
+  position: absolute;
+  top: 56px;
+  right: 10px;
+}
+@media (min-width: 1200px) {
+  .btn-detail {
+    width: 100px;
+  }  
+}
+
+
+#gachaBall.dropping {
+  animation: dropping .3s ease-in forwards;
+  
+}
+@keyframes dropping {
+  0% {
+    transform: translateY(-100%) scaleY(1);
+  }
+  40% {
+    transform: translateY(0%) scaleY(1);
+  }
+  50% {
+    transform: translateY(0%) scaleY(0.5);
+  }
+  60% {
+    transform: translateY(0%) scaleY(1.25);
+  }
+  75% {
+    transform: translateY(-10%) scaleY(1);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1);
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prize-100 {  background: url(../images/prize-100.png) center top no-repeat;}
+.prize-200 {  background: url(../images/prize-200.png) center top no-repeat;}
+.prize-300 {  background: url(../images/prize-300.png) center top no-repeat;}
+.prize-gg-1 {  background: url(../images/prize-gg-1.png) center top no-repeat;}
+.prize-gg-2 {  background: url(../images/prize-gg-2.png) center top no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

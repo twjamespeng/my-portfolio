@@ -1,0 +1,277 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400');
+
+body {
+  
+  background: url(../images/bg.png) #fef3e7 no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 0%;
+  background-size: 100% auto;
+  position: static;
+  font-family: 'Century Gothic' , 'Noto Sans TC', 'Microsoft JhengHei';
+  font-weight: 400;
+  overflow-x: hidden!important;
+  
+}
+.default-top {
+  transition: all 0.2s ease-in;
+  background-color: transparent;
+}
+.default-top.notontop {
+  background-color: rgba(244, 88, 88, 0.95);
+}
+.default-footer {
+  background-color: rgba(244, 88, 88, 0.95);
+}
+canvas {
+  width: 100vw;
+  height: calc(100vh - 46px);
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  top: 46px;
+  left: 0;
+}
+footer.p-3.bg-dark-theme.text-center.text-white.position-relative {
+  display: none!important;
+}
+#Landing {
+  min-height: calc(100vh - 46px);
+  padding-top: 80px;
+}
+@media (min-width: 1200px) {
+  #Landing {
+    padding-top: 0;
+  }  
+}
+button {
+  box-shadow: none!important;
+}
+#btnPlay,
+#btnShopping,
+#btnGacha,
+#btnLogin {
+  z-index: 999;
+  pointer-events: auto;
+}
+#btnShopping {
+  display: none;
+
+}
+#btnGacha,
+#btnOk {
+  
+  transform: translateY(-20%);
+}
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+  pointer-events: none;
+  opacity: 1;
+  filter: grayscale(100%) brightness(150%);
+}
+
+
+
+
+.ballimg {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1200px) {
+  .ballimg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+#logo {
+  width: 800px;
+  height: 420px;
+  position: relative;
+  margin: 0px auto;
+  
+  animation-delay: 1.5s;
+  overflow: visible;
+  z-index: 99;
+}
+
+
+
+
+
+#Game {
+  margin: 0 auto;
+  position: relative;
+  background: rgba(255, 187, 187, 0);
+  border: 0px solid #734b23;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0);
+  pointer-events: none;
+  border-radius: 24px;
+  transition: all 0.25s ease-in;
+  opacity: 0;
+  transform: scale(0);
+  height: 0;
+
+}
+#Game.on {
+  opacity: 1;
+  transform: scale(1);
+  height: auto;
+  /*margin-bottom: 40px;*/
+}
+#Game.on > .d-flex {
+  min-height: calc(100vh - 46px);
+}
+.machine {
+  pointer-events: none;
+  padding-top: 20px;
+}
+.turn-table {
+  width: 27.5%;
+  position: absolute;
+  background-size: 100%;
+  bottom: 13%;
+  right: 17.5%;
+}
+@media (min-width: 1200px) {
+  .turn-table {
+    bottom: 11.5%;
+  }  
+}
+.turn-table.turning {
+  animation: turning 1s ease-in forwards;
+}
+@keyframes turning {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pickup-hole {
+  width: 27.5%;
+  
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  bottom: 9.1666%;
+  left: 13.75%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#gachaBall {
+  
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  transform: translateY(-100%);
+  transform-origin: 50% 100%;
+}
+.ball-1 { background: url(../images/ball_1.png); }
+.ball-2 { background: url(../images/ball_2.png); }
+.ball-3 { background: url(../images/ball_3.png); }
+.ball-4 { background: url(../images/ball_4.png); }
+.ball-5 { background: url(../images/ball_5.png); }
+
+.btn-detail {
+  width: 50px;
+  position: absolute;
+  top: 56px;
+  right: 10px;
+}
+@media (min-width: 1200px) {
+  .btn-detail {
+    width: 100px;
+  }  
+}
+
+
+#gachaBall.dropping {
+  animation: dropping .3s ease-in forwards;
+  
+}
+@keyframes dropping {
+  0% {
+    transform: translateY(-100%) scaleY(1);
+  }
+  40% {
+    transform: translateY(0%) scaleY(1);
+  }
+  50% {
+    transform: translateY(0%) scaleY(0.5);
+  }
+  60% {
+    transform: translateY(0%) scaleY(1.25);
+  }
+  75% {
+    transform: translateY(-10%) scaleY(1);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1);
+  }
+  
+}
+
+
+
+.modal-backdrop.show {
+  opacity: .75;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prize-100 {  background: url(../images/prize-100.png) center top no-repeat;}
+.prize-200 {  background: url(../images/prize-200.png) center top no-repeat;}
+.prize-300 {  background: url(../images/prize-300.png) center top no-repeat;}
+.prize-gg-1 {  background: url(../images/prize-gg-1.png) center top no-repeat;}
+.prize-gg-2 {  background: url(../images/prize-gg-2.png) center top no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

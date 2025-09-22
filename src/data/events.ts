@@ -1,0 +1,77 @@
+import { Event } from "@/types/event"
+
+export const events: Event[] = [
+  {
+    slug: "202311coin",
+    title: "11點搶銀幣",
+    summary: "每日上午11點整開放搶銀幣",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202311coin.jpg",
+    demoUrl: "/html/202311coin.html",
+  },
+  {
+    slug: "202307scratchcard",
+    title: "樂享好時光",
+    summary: "刮刮樂抽獎",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202307scratchcard.jpg",
+    demoUrl: "/html/202307scratchcard.html",
+  },
+  {
+    slug: "202306catch",
+    title: "一起來包粽",
+    summary: "移動滑鼠來接住食材，完成遊戲獲得抽獎機會",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202306catch.jpg",
+    demoUrl: "/html/202306catch.html",
+  },
+  {
+    slug: "202205gacha",
+    title: "新客募集大FUN送",
+    summary: "扭蛋抽獎，提升新客註冊率",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202205gacha.jpg",
+    demoUrl: "/html/202205gacha.html",
+  },
+  {
+    slug: "202212rain",
+    title: "天降紅包雨",
+    summary: "點擊落下的紅包進行抽獎",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202212rain.jpg",
+    demoUrl: "/html/202212rain.html",
+  },
+  {
+    slug: "202211fishing",
+    title: "魚是喜歡你",
+    summary: "控制點擊頻率來釣魚，完成遊戲獲得抽獎機會",
+    tech: ["HTML", "CSS", "JavaScript", "GSAP"],
+    thumbnailUrl: "/thumbnails/202211fishing.jpg",
+    demoUrl: "/html/202211fishing.html",
+  },
+  
+  {
+    slug: "202207card",
+    title: "親手獻上祝福",
+    summary: "生日卡片製作，提供社群分享",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202207card.jpg",
+    demoUrl: "/html/202207card.html",
+  },
+  {
+    slug: "202502draw",
+    title: "好運拉霸機",
+    summary: "拉霸機抽獎",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202502draw.jpg",
+    demoUrl: "/html/202502draw.html",
+  },
+  {
+    slug: "202501draw",
+    title: "蛇來運轉",
+    summary: "轉盤機抽獎",
+    tech: ["HTML", "CSS", "JavaScript"],
+    thumbnailUrl: "/thumbnails/202501draw.jpg",
+    demoUrl: "/html/202501draw.html",
+  },
+];

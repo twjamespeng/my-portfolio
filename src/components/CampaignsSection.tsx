@@ -44,7 +44,7 @@ export default function CampaignsSection() {
     >
       <div className="container mx-auto max-w-6xl px-6">
         <h2 className="text-3xl font-bold mb-6">行銷活動頁 <span className="text-teal-500">Campaigns</span></h2>
-        <p className="text-lg text-gray-300 mb-6">行銷活動頁部份，我負責<span className="font-semibold underline mx-1">頁面切版、動畫特效、商品動態導入</span>，提升活動頁的互動感與靈活度。</p>
+        <p className="text-lg text-gray-300 mb-6">行銷活動頁部份，我負責<span className="text-teal-500 font-semibold mx-1">頁面切版、動畫特效、商品動態導入</span>，提升活動頁的互動感與靈活度。</p>
         <ul className="list-disc text-gray-400 mb-6 ps-4">
           <li>頁面：以Bootstrap框架為基礎，進行手刻RWD切版</li>
           <li>特效：針對行銷需求提供特效發想，以線上實例為參考，必要時搭配第三方套件(例如Particle.js、GSAP)來進行實做</li>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="description" content="單筆消費滿$2,023元，即可參與天降紅包雨遊戲活動，最高可得1,000 ViVa銀幣!!">
+  <meta http-equiv="keywords" content="領紅包,ViVa購物,購物,網路購物,ViVa TV,ViVa,電視購物,線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="天降紅包雨 - ViVa美好購物網">
+  <meta property="og:description" content="單筆消費滿$2,023元，即可參與天降紅包雨遊戲活動，最高可得1,000 ViVa銀幣!!">
+  <meta property="og:image" content="https://www.vivatv.com.tw/html/images/act/2022/12/rain/images/og.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <title>天降紅包雨 - ViVa美好購物網</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="images/act/2022/12/rain/css/style.css">
+  <link rel="shortcut icon" href="http://www.vivatv.com.tw/common/images/favicons/favicon.ico" type="image/ico"/>
+</head>
+
+
+<body>
+
+<div class="loading">
+  <span class="loader"></span>
+</div>
+
+<div class="backdrop-filter-overlay fade"></div>
+
+<div class="cloud-props">
+  <div class="cloud cloud-1"><img src="images/act/2022/12/rain/images/cloud-props.png" class="img-fluid" alt="cloud props 1"></div>
+  <div class="cloud cloud-2"><img src="images/act/2022/12/rain/images/cloud-props.png" class="img-fluid" alt="cloud props 2"></div>
+</div>
+
+<div class="coinbag-props">
+  <div class="satin"></div>
+  <div class="box-props"></div>
+  <div class="d-flex flex-column justify-content-start align-items-center position-fixed w-100 h-100 position-relative">
+    <div class="w-100 p-3 pt-2 pb-0 p-xxl-5 pt-xxl-4 pb-xxl-0 text-start">
+      <a class="d-block" href="https://www.vivatv.com.tw/">
+        <img src="images/act/2022/12/rain/images/viva-logo-white.png" class="img-fluid viva-logo us-none" alt="ViVaTV logo">
+      </a>
+    </div>
+    <div class="logo text-center mb-3 us-none">
+      <img src="images/act/2022/12/rain/images/logo.png" class="img-fluid" alt="logo 天降紅包雨">  
+    </div>
+    <div class="d-flex flex-column justify-content-center position-relative">
+      <button id="btnLogin" class="btn btn-outline-light rounded-pill px-5 m-2 fs-5 animate__animated animate__fadeInUp" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">會員登入</button>
+      <div id="btnStartWrapper" class="animate__animated">
+        <button id="btnStart" class="btn btn-outline-light rounded-pill px-5 m-2 fs-5 animate__animated animate__pulse animate__infinite" type="button" onclick="startGame()">開始遊戲</button>  
+      </div>
+      <button id="btnRule" class="btn btn-outline-light rounded-pill px-5 m-2 fs-5 animate__animated animate__fadeInUp" type="button" data-bs-toggle="modal" data-bs-target="#modalEventRule">活動說明</button>
+      <!-- <button id="btnRule" class="btn btn-outline-light rounded-pill px-5 m-2 fs-5 animate__animated animate__fadeInUp" type="button" data-bs-toggle="modal" data-bs-target="#submitUserIDModal">Test</button> -->
+    </div>
+  </div>
+  <div class="area fade paused">
+    <div class="assets">
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="spinningasset envelope">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rabbit-props">
+    <div class="rabbit-left"><img src="images/act/2022/12/rain/images/rabbit-left.png" class="img-fluid" alt="rabbit left"></div>
+    <div class="rabbit-right"><img src="images/act/2022/12/rain/images/rabbit-right.png" class="img-fluid" alt="rabbit right"></div>
+  </div>
+  <div class="coinbag">
+    <!-- 錢袋 -->
+    <div class="coinbag-shadow animate__animated animate__fadeIn">
+      <img src="images/act/2022/12/rain/images/coinbag-shadow.png" class="img-fluid" alt="coinbag shadow">
+    </div>
+    <div class="coinbag-body animate__animated animate__bounceInDown">
+      <img src="images/act/2022/12/rain/images/coinbag-body.png" class="img-fluid" alt="coinbag body">
+    </div>
+    <div class="coinbag-glow">
+      <img src="images/act/2022/12/rain/images/coinbag-glow-base.png" class="img-fluid" alt="coinbag glow">
+      <img src="images/act/2022/12/rain/images/coinbag-glow-1.png" class="img-fluid" alt="coinbag glow">
+      <img src="images/act/2022/12/rain/images/coinbag-glow-2.png" class="img-fluid" alt="coinbag glow">
+      <img src="images/act/2022/12/rain/images/coinbag-glow-3.png" class="img-fluid" alt="coinbag glow">
+      <img src="images/act/2022/12/rain/images/coinbag-glow-4.png" class="img-fluid" alt="coinbag glow">
+      <img src="images/act/2022/12/rain/images/coinbag-glow-5.png" class="img-fluid" alt="coinbag glow">
+      <img src="images/act/2022/12/rain/images/coinbag-glow-6.png" class="img-fluid" alt="coinbag glow">
+      <img src="images/act/2022/12/rain/images/coinbag-glow-7.png" class="img-fluid" alt="coinbag glow">
+    </div>
+    <div class="coinbag-glitter">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- 左coin -->
+    <div class="coin-1-shadow-bottom">
+      <img src="images/act/2022/12/rain/images/coin-1-shadow-bottom.png" class="img-fluid" alt="coin-1 shadow bottom">
+    </div>
+    <div class="coin-1-shadow-right">
+      <img src="images/act/2022/12/rain/images/coin-1-shadow-right.png" class="img-fluid" alt="coin-1 shadow right">
+    </div>
+    <div class="coin-1-body">
+      <img src="images/act/2022/12/rain/images/coin-1-body.png" class="img-fluid" alt="coin-1 body">
+    </div>
+    <div class="coin-1-glow">
+      <img src="images/act/2022/12/rain/images/coin-1-glow.png" class="img-fluid" alt="coin-1 glow">
+    </div>
+    <!-- 元寶 -->
+    <div class="ingot-shadow">
+      <img src="images/act/2022/12/rain/images/ingot-shadow.png" class="img-fluid" alt="ingot shadow">
+    </div>
+    <div class="ingot-body">
+      <img src="images/act/2022/12/rain/images/ingot-body.png" class="img-fluid" alt="ingot body">
+    </div>
+    <div class="ingot-glow">
+      <img src="images/act/2022/12/rain/images/ingot-glow.png" class="img-fluid" alt="ingot glow">
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+<div id="loginSuccess" class="fade position-absolute start-50 top-50 translate-middle pe-none us-none px-5 py-3 bg-dark text-white rounded-pill">
+  <span>登入成功</span>
+</div>
+
+
+
+<!-- 中獎 modal  -->
+<div class="modal animate__animated animate__fadeIn" id="modalSuccess" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0 py-0">
+      <div class="modal-body us-none">
+        <img id="prizeImage" src="images/act/2022/12/rain/images/prize-100.png" class="img-fluid us-none">
+      </div>
+      <div class="modal-footer border-0 py-0">
+        <a id="btnMainStage" onclick="alert('網址待補')" class="btn btn-light rounded-pill px-5 w-100 fs-5 mb-3 animate__animated animate__fadeInUp">回主會場</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 活動說明 modal -->
+<div class="modal animate__animated animate__fadeIn" id="modalEventRule" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-0">
+        <div class="d-flex flex-column">
+          <h2 class="text-center">活動說明</h2>
+          <h5>活動期間</h5>
+          <p>2022/12/25(日) 00:00 ~ 2023/1/20(五) 23:59</p>
+          <h5>活動內容</h5>
+          <p>活動期間於EC平台，<u class="mx-1">單筆消費滿$2,023元</u>即可參與天降紅包雨遊戲活動。<br>（每一帳號限參與一次，送完為止）。</p>
+          <p>銀幣於次日中午12時歸戶，使用期限為發放日後一個月。</p>
+          <h5>活動獎項</h5>
+          <p class="mb-1">100元銀幣 / 共計200名</p>
+          <p class="mb-1">200元銀幣 / 共計100名</p>
+          <p class="mb-1">800元銀幣 / 共計20名</p>
+          <p class="mb-1">1000元銀幣 / 共計10名</p>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-light w-100 rounded-pill" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 會員登入modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-0">
+
+      <div class="modal-header">
+        <span class="modal-title fs-6 fs-xl-5">會員登入(DEMO)</span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <!-- 登入功能 -->
+        <div class="d-flex flex-column p-xl-3">
+
+          <div class="input-group mb-3 mb-xl-4">
+            <span class="input-group-text fs-7" id="userID">帳號</span>
+            <input type="text" class="form-control" placeholder="請輸入身分證號或居留證號">
+          </div>
+          
+          <div class="input-group mb-3 mb-xl-4">
+            <span class="input-group-text fs-7" id="userPassword">密碼</span>
+            <input type="password" class="form-control" placeholder="">
+          </div>
+
+          <!-- 輸入驗證碼 -->
+          <div class="input-group mb-3 mb-xl-4">
+            <div class="border rounded-start input-group-validate"><img src="images/act/2022/12/rain/images/validateCode.do.jpg"></div>
+            <input type="text" class="form-control fs-7" placeholder="輸入驗證碼" id="inputValidateCode">
+            <button class="btn btn-secondary fs-7 py-2" type="button">重新產生</button>
+          </div>            
+
+          <div class="d-flex justify-content-end">
+            <div class="form-check form-switch form-switch-md d-flex align-items-center mb-0">
+              <input class="form-check-input" type="checkbox" id="rememberMyAccount">
+              <label class="form-check-label ms-2" for="rememberMyAccount">記住我的帳號</label>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="modal-footer p-2">
+        <div class="d-flex flex-column w-100">
+          <div class="d-flex justify-content-between flex-column">
+            <div class="btn-group p-2" role="group">
+              <button class="btn btn-danger rounded-pill w-100 fs-xl-5" type="button" data-bs-dismiss="modal" onclick="loginDemo()">登入(不需輸入帳密)</button>
+            </div>
+            <div class="btn-group p-2" role="group">
+              <button class="btn btn-outline-secondary rounded-pill-start fs-xl-6" type="button">忘記密碼</button>
+              <button class="btn btn-outline-secondary rounded-0 fs-xl-6" type="button" data-bs-dismiss="modal">重發認證碼</button>
+              <button class="btn btn-outline-secondary rounded-pill-end fs-xl-6" type="button" data-bs-dismiss="modal">加入會員</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 輸入身份證字號modal -->
+<div class="modal fade" id="submitUserIDModal" tabindex="-1" aria-labelledby="submitUserIDModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-0">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column p-2 p-xl-3">
+          <h3 class="text-center mb-3">請輸入持卡人身份證字號</h3>
+          <div class="input-group mb-3 mb-xl-4">
+            <input type="text" class="form-control" placeholder="含英文字母10碼身份證字號(不分大小寫)">
+          </div>
+          <div class="input-group">
+            <div class="d-flex border rounded-start input-group-validate"><img src="images/act/2022/12/rain/images/validateCode.do.jpg"></div>
+            <input type="text" class="form-control fs-7" placeholder="輸入驗證碼" id="inputValidateCode">
+            <button class="btn btn-secondary fs-7 py-2" type="button">重新產生</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer p-2">
+        <div class="d-flex flex-column w-100">
+          <div class="d-flex justify-content-between flex-column">
+            <div class="btn-group p-2" role="group">
+              <button class="btn btn-danger rounded-pill w-100 fs-xl-5" type="button" data-bs-dismiss="modal">確認送出</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="turn">請將手機螢幕轉為直立</div>
+
+<div class="cursor"></div>
+
+  
+<!-- 已額滿modal -->
+<div class="modal fade" id="alreadyFull" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-center">活動已額滿</h4>
+        <p class="mb-0">感謝您參與本次活動，因名額有限，目前統計資料已達額滿。在此跟您說聲抱歉，期待日後能繼續支持ViVa的各項活動。</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 已玩過modal -->
+<div class="modal fade" id="alreadyPlayed" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-center">您已參加過囉</h4>
+        <p class="text-center mb-0">本次活動每一帳號限參與一次</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 不符合資格modal -->
+<div class="modal fade" id="notQualified" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-center">活動資格不符</h4>
+        <p class="text-center mb-0">活動期間於EC平台，<u class="mx-1">單筆消費滿$2,023元</u><br>即可參與天降紅包雨遊戲活動。</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="images/act/2022/12/rain/js/main.js"></script>
+
+
+
+</body>
+</html>

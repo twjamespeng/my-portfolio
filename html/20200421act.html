@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1240">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="description" content="啾咪轉轉樂">
+  <meta http-equiv="keywords" content="母親節,化妝品,保養品,精華液,抗老,除皺,逆齡,青春露,護膝,鍋具,保健食品,珠寶,手錶,蛋糕,禮盒,面膜,康乃馨,按摩,禮物,抽獎,滿額抽,ViVa購物,購物,網路購物,ViVa TV,ViVa,電視購物,線上購物">
+  <title>天天轉蛋!最高$300購物金 - ViVa美好購物網</title>
+
+  
+  <link href="https://www.vivatv.com.tw/html/images/common/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://www.vivatv.com.tw/html/images/common/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://www.vivatv.com.tw/common/style/headerfooter-1200.css" />
+
+  <link rel="stylesheet" type="text/css" href="images/act/2020/04/21/css/row-1240.css">
+  <link rel="stylesheet" type="text/css" href="images/act/2020/04/21/css/style.css">
+  <link rel="stylesheet" type="text/css" href="images/act/2020/04/21/css/ball.css">
+	
+
+  <link rel="shortcut icon" href="../common/images/header/viva_b.ico" type="image/ico" />
+  <link rel="icon" href="../common/images/header/viva_b.ico" type="image/ico" />
+</head>
+<body id="top">
+  <!-- preload ball images-->
+  <img class="ballimg" id="ballimg1" src="images/act/2020/04/21/images/ball_1.png">
+  <img class="ballimg" id="ballimg2" src="images/act/2020/04/21/images/ball_2.png">
+  <img class="ballimg" id="ballimg3" src="images/act/2020/04/21/images/ball_3.png">
+  <img class="ballimg" id="ballimg4" src="images/act/2020/04/21/images/ball_4.png">
+  <img class="ballimg" id="ballimg5" src="images/act/2020/04/21/images/ball_5.png">
+  <img class="ballimg" id="ballimg6" src="images/act/2020/04/21/images/ball_6.png">
+  <img class="ballimg" id="ballimg7" src="images/act/2020/04/21/images/ball_7.png">
+  <img class="ballimg" id="ballimg8" src="images/act/2020/04/21/images/ball_8.png">
+  <img class="ballimg" id="ballimg9" src="images/act/2020/04/21/images/ball_9.png">
+  <img class="ballimg" id="ballimg10" src="images/act/2020/04/21/images/ball_10.png">
+
+  <img class="ballimg" id="ballimg1_2x" src="images/act/2020/04/21/images/ball_1_2x.png">
+  <img class="ballimg" id="ballimg2_2x" src="images/act/2020/04/21/images/ball_2_2x.png">
+  <img class="ballimg" id="ballimg3_2x" src="images/act/2020/04/21/images/ball_3_2x.png">
+  <img class="ballimg" id="ballimg4_2x" src="images/act/2020/04/21/images/ball_4_2x.png">
+  <img class="ballimg" id="ballimg5_2x" src="images/act/2020/04/21/images/ball_5_2x.png">
+  <img class="ballimg" id="ballimg6_2x" src="images/act/2020/04/21/images/ball_6_2x.png">
+  <img class="ballimg" id="ballimg7_2x" src="images/act/2020/04/21/images/ball_7_2x.png">
+  <img class="ballimg" id="ballimg8_2x" src="images/act/2020/04/21/images/ball_8_2x.png">
+  <img class="ballimg" id="ballimg9_2x" src="images/act/2020/04/21/images/ball_9_2x.png">
+  <img class="ballimg" id="ballimg10_2x" src="images/act/2020/04/21/images/ball_10_2x.png">
+
+  <div class="d-flex flex-column align-items-center flexcontainer animated fadeIn">
+    
+    <canvas id="c"></canvas>
+    
+    <div class="side-bar d-flex flex-wrap">
+      <div class="btn-join"></div>
+      <div class="btn-detail"></div>
+      <div class="btn-shopping"></div>
+    </div>
+  	<div id="game-zone">
+      <div class="machine">
+        <div class="turn-table"></div>
+        <div class="pickup-hole">
+          <div id="gachapon"></div>
+        </div>
+      </div>
+      <div id="btn-gacha"></div>
+    </div>
+    <div id="landing" class="wrap-center">
+  		<div id="logo" class="animated tada">
+        <div id="cat-ball" class="animated bounce infinite"></div>
+        <div id="img-logo"></div>
+      </div>
+      <div class="subtitle animated fadeIn"></div>
+      <div class="board d-flex flex-wrap justify-content-center">
+        <div class="left-board"></div>
+        <div class="btn-login order-3"></div>
+        <div class="right-board"></div>
+      </div>
+    </div>
+    
+    <div class="wrap-center">
+      <div class="grid-group-wrapper">
+        <div id="my-row" class="grid-group"></div>
+      </div>
+    </div>
+
+    <div class="wrap-center">
+      <div id="detail" class="detail"></div>
+    </div>
+    
+  </div>
+  <div class="scrollToTop"><i class="fa fa-angle-up"></i></div>
+  <!-- modal -->
+  <div class="modal" id="result-prize" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+      <div id="prize" class="modal-content modal-prize">
+        <div class="modal-body"></div>
+        <div id="btn-ok" data-dismiss="modal"></div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <script type="text/javascript" src="https://www.vivatv.com.tw/html/images/common/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="https://www.vivatv.com.tw/html/images/common/js/tether.min.js"></script>
+  <script type="text/javascript" src="https://www.vivatv.com.tw/html/images/common/js/bootstrap.min.js"></script>    
+  <script type="text/javascript" src="https://www.vivatv.com.tw/html/images/common/js/mdb.min.js"></script>
+  <script type="text/javascript" src="https://www.vivatv.com.tw/html/images/common/js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="images/act/2020/04/21/js/row-1240.js"></script>
+  <script type="text/javascript" src="images/act/2020/04/21/js/main.js"></script>
+  <script type="text/javascript" src="images/act/2020/04/21/js/ball.js"></script>
+  <script type="text/javascript" src="https://www.vivatv.com.tw/common/js/headerfooter-1200.js" charset="UTF-8"></script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4685490-4', 'vivatv.com.tw');
+  ga('send', 'pageview');
+  </script>
+  </body>
+  </html>

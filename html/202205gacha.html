@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="description" content="啾咪轉轉樂">
+  <meta http-equiv="keywords" content="母親節,化妝品,保養品,精華液,抗老,除皺,逆齡,青春露,護膝,鍋具,保健食品,珠寶,手錶,蛋糕,禮盒,面膜,康乃馨,按摩,禮物,抽獎,滿額抽,ViVa購物,購物,網路購物,ViVa TV,ViVa,電視購物,線上購物">
+  <title>新客募集 ViVa銀幣大FUN送 - ViVa美好購物網</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://www.vivatv.com.tw/common/style/headerfooter-rwd-2021.css?v202204291337" />
+  <link rel="stylesheet" type="text/css" href="images/act/2022/05/gacha/css/style.css">
+  <link rel="shortcut icon" href="../common/images/header/viva_b.ico" type="image/ico" />
+  <link rel="icon" href="../common/images/header/viva_b.ico" type="image/ico" />
+</head>
+
+
+<body>
+  <!-- preload ball images-->
+  <div class="ballimg"><img id="ballimg1" src="images/act/2022/05/gacha/images/ball_1.png"></div>
+  <div class="ballimg"><img id="ballimg2" src="images/act/2022/05/gacha/images/ball_2.png"></div>
+  <div class="ballimg"><img id="ballimg3" src="images/act/2022/05/gacha/images/ball_3.png"></div>
+  <div class="ballimg"><img id="ballimg4" src="images/act/2022/05/gacha/images/ball_4.png"></div>
+  <div class="ballimg"><img id="ballimg5" src="images/act/2022/05/gacha/images/ball_5.png"></div>
+
+  <div class="ballimg"><img id="ballimg1_05x" src="images/act/2022/05/gacha/images/ball_1_05x.png"></div>
+  <div class="ballimg"><img id="ballimg2_05x" src="images/act/2022/05/gacha/images/ball_2_05x.png"></div>
+  <div class="ballimg"><img id="ballimg3_05x" src="images/act/2022/05/gacha/images/ball_3_05x.png"></div>
+  <div class="ballimg"><img id="ballimg4_05x" src="images/act/2022/05/gacha/images/ball_4_05x.png"></div>
+  <div class="ballimg"><img id="ballimg5_05x" src="images/act/2022/05/gacha/images/ball_5_05x.png"></div>
+
+
+
+  
+
+  <div class="d-flex flex-column align-items-center animate__animated animate__fadeIn">
+    <!-- 背景canvas -->
+    <canvas id="ballCanvas"></canvas>
+    <!-- 扭蛋機 -->
+  	<div id="Game">
+      <div class="d-flex flex-column flex-xl-row flex-xxl-column justify-content-start justify-content-xl-center align-items-center">
+        <div class="machine position-relative mx-3 mx-xl-0">
+          <img src="images/act/2022/05/gacha/images/machine-m.png" class="img-fluid d-inline d-xl-none">
+          <img src="images/act/2022/05/gacha/images/machine.png" class="img-fluid d-none d-xl-inline">
+          <div class="turn-table">
+            <img src="images/act/2022/05/gacha/images/turn-table.png" class="img-fluid">
+          </div>
+          <div class="pickup-hole">
+            <img src="images/act/2022/05/gacha/images/pickup-hole.png" class="img-fluid">
+            <div id="gachaBall"></div>
+          </div>
+        </div>
+        <button id="btnGacha" class="btn p-0 px-3 mx-3 mx-xl-0" type="button">
+          <img src="images/act/2022/05/gacha/images/btn-gacha.png" class="img-fluid" alt="扭蛋GO!">
+        </button>
+      </div>
+    </div>
+    <!-- Logo & 按鈕 -->
+    <div id="Landing" class="d-flex flex-column justify-content-start justify-content-xl-center">
+      <div class="row g-0 justify-content-center">
+        <div class="col-12 col-xl-10">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <!-- 活動說明 -->
+            <div class="btn-detail">
+              <button id="btnDetail" class="btn p-0" type="button" data-bs-toggle="modal" data-bs-target="#eventDetail">
+                <img src="images/act/2022/05/gacha/images/btn-detail.png" class="img-fluid" alt="活動說明">
+              </button>
+            </div>
+            <!-- logo -->
+            <div class="animated__animated animate__bounceIn">
+              <img src="images/act/2022/05/gacha/images/logo.png" class="img-fluid" alt="新客募集 ViVa銀幣大FUN送!">
+            </div>
+            <!-- 點我玩扭蛋 -->
+            <div class="col-12 col-xl-8 d-flex px-3">
+              <button id="btnPlay" class="btn p-0" type="button" onclick="startGame();">
+                <img src="images/act/2022/05/gacha/images/btn-play.png" class="img-fluid" alt="點我玩扭蛋">
+              </button>
+            </div>
+            
+            
+            
+          </div>
+        </div>
+      </div> 
+    </div>   
+  </div>
+  
+  <!-- 抽獎結果modal -->
+  <div class="modal fade" id="prizeResult" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div id="prize" class="modal-body text-center p-0">
+        </div>
+        <div class="modal-footer border-0 justify-content-center p-0">
+          <button id="btnOk" type="button" class="btn p-0" data-bs-dismiss="modal">
+            <img src="images/act/2022/05/gacha/images/btn-ok.png" class="img-fluid">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 活動說明modal -->
+  <div class="modal fade" id="eventDetail" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">活動說明</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="text-center">新客募集 ViVa銀幣大FUN送!</h5>
+          <ol class="ps-3">
+            <li class="mb-2">活動期間：2022/5/16 10:00 - 2022/5/20 10:00。</li>
+            <li class="mb-2">活動內容：活動期間加入會員即可參與每日搶銀幣活動 / 次日中午12時歸戶（每人限參與一次）</li>
+            <li class="mb-2">活動獎項：<br>每日100元銀幣 / 限350名<br>每日200元銀幣 / 限250名<br>每日300元銀幣 / 限100名</li>
+            <li class="mb-2 text-danger fw-bold">銀幣使用期限：2022/6/30</li>
+            <li><a href="https://www.vivatv.com.tw/Information.go?flag=gift" target="_blank" class="text-secondary">銀幣使用說明</a></li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 已額滿modal -->
+  <div class="modal fade" id="alreadyFull" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="text-center">很抱歉，今日活動已額滿</h5>
+          <h5 class="text-center">歡迎您明日再來參加！</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 已玩過modal -->
+  <div class="modal fade" id="alreadyPlayed" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="text-center">很抱歉</h5>
+          <h5 class="text-center">您已玩過扭蛋/不符合新會員資格</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+  
+  <script type="text/javascript" src="https://www.vivatv.com.tw/html/images/common/js/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.vivatv.com.tw/html/images/common/js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="images/act/2022/05/gacha/js/main.js"></script>
+  <script type="text/javascript" src="images/act/2022/05/gacha/js/ball.js"></script>
+  <script src="https://www.vivatv.com.tw/common/js/headerfooter-rwd-2021.js?v202204291337" charset="UTF-8"></script>
+  
+  
+  </body>
+  </html>

@@ -1,0 +1,360 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
+
+body {
+  background-color: rgb(92,95,143);
+  background-image: url(../images/bg.png), radial-gradient(circle, rgba(88,97,210,1) 15%, rgba(23,16,31,1) 100%);
+  
+  background-repeat: repeat;
+  background-size: 200% auto;
+  background-position: 50% 100%;
+
+  animation: animatedBG 10000s linear infinite;
+
+  font-family: 'Century Gothic' , 'Noto Sans TC', 'Microsoft JhengHei', 'Exo', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  transition: all 12s linear;
+
+
+}
+
+.text-warning {
+  color: #ffe400!important;
+}
+
+.modal-backdrop {
+  opacity: 0!important;
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  #modalSuccess .modal-dialog {
+    max-width: 300px;
+  }
+}
+
+#modalEventRule .modal-content {
+  background: rgba(38, 40, 85, 0.95);
+  color: #fff;
+  border-radius: 20px;
+}
+#modalEventRule h5 {
+  color: #ffc107;
+}
+
+.input-group-validate {
+  min-width: 104px;
+  flex-basis: 104px;
+}
+.input-group-validate img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.bg-dark {
+  --bs-bg-opacity: 0.75;
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity)) !important;
+}
+
+
+@media (min-width: 768px) {
+  body {
+    background-size: 100% auto;
+  }
+}
+
+@keyframes animatedBG {
+  from {
+    background-position: 50% 100%;
+  }
+  to {
+    background-position: 50% 100000px;
+  }
+}
+
+body.hooked {
+}
+
+#canvasLine {
+  position: absolute;
+  top: -100vh;
+  transition: all 1s ease-in-out;
+  
+}
+
+
+#canvasLine.cast {
+  top: 0;
+  animation: moving 2s ease-in-out infinite alternate;
+}
+
+@keyframes moving {
+  from {
+    transform: translateY(0px);
+  } 
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+#canvasWaterFlow {
+  position: absolute;
+  top: 0;
+}
+#canvasFish {
+  position: absolute;
+  top: 50%;
+  animation: swim 5s linear infinite;
+  transform: translate3d(0, 0, 0) rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: all 1s ease-in-out;
+  left: 50%;
+  margin-left: -99px;
+
+}
+
+@media (min-width: 768px) {
+  #canvasFish {
+    margin-left: -150px;
+  }
+}
+
+@keyframes swim {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(20px, 0, 0) rotate(-15deg);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate3d(-20px, 0, 0) rotate(15deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+#canvasFish.standby {
+  top: 100%;
+  filter: brightness(50%) saturate(50%) contrast(200%);
+}
+
+.text-shadow {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 1);
+}
+
+.progress {
+  height: 2rem;
+  /*transform: rotate(-90deg);
+  transform-origin: 100% 100%;*/
+}
+
+#turn {
+  display: none;
+}
+
+.cursor {
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursoreffect {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 1px solid #4deeea;
+  box-shadow: 0 0 20px #4deeea, 0 0 40px #4deeea, 0 0 80px #4deeea;
+  border-radius: 50%;
+  position: absolute;
+  animation: cursorPulse 1s;
+  pointer-events: none;
+}
+
+@keyframes cursorPulse {
+  0% {-webkit-transform: scale(1.0); opacity: 1;}
+  100% {-webkit-transform: scale(3.0); opacity: 0;}
+}
+
+.tap-now {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: -100px;
+  background-image: url(../images/tap-now.png);
+  background-size: contain;
+  pointer-events: none;
+  user-select: none;
+  opacity: .95;
+}
+
+/* (A) WRONG ORIENTATION - SHOW MESSAGE HIDE CONTENT */
+@media only screen and (orientation:landscape) and (max-width: 992px) {
+  #turn { 
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 9999;
+    background: #000;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  /*#container { display:none; }*/
+}
+ 
+/* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
+@media only screen and (orientation:portrait) {
+  #turn { display:none; }
+  /*#container { display:block; }*/
+}
+
+body.hooked #canvasFish {
+  top: calc(40vh - 100px);
+  transition: all .2s ease-in-out;
+}
+@media (min-width: 768px) {
+  body.hooked #canvasFish {
+    top: calc(40vh - 60px);
+    transition: all .2s ease-in-out;
+  }
+}
+body.escaped #canvasFish {
+  top: 300vh;
+  transition: all 1s ease-in-out;  
+}
+
+.viva-logo {
+  width: 80px;
+  margin-top: 0;
+  margin-left: 0.5rem;
+  z-index: 9000;
+}
+
+@media (min-width: 768px) {
+  .viva-logo {
+    width: 120px;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+  } 
+}
+.logo {
+  width: 100%;
+  transition: all .3s linear;
+  top: 50%;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+.logo img {
+  /*max-width: 1000px;*/
+}
+
+body.cast .logo {
+  width: 33%;
+  top: 3%;
+}
+
+@media (min-width: 1200px) {
+  body.cast .logo {
+    width: 25%;
+    top: 10%;
+  }
+}
+
+
+
+body.catched #canvasFish,
+body.catched #canvasLine {
+  top: -100vh;
+}
+
+body.catched #canvasLine {
+  transition: all .2s ease-in-out;
+}
+
+body.catched #canvasWaterFlow {
+  display: none;
+}
+
+#btnGroup {
+  margin-top: 90px;
+}
+
+@media (min-width: 768px) {
+  #btnGroup {
+    margin-top: 180px;
+  }
+}
+
+#btnLogin {
+  animation-delay: 2s;
+  animation-duration: 1s;
+  border: 2px solid #fff!important;
+  box-shadow: 0 0 10px rgba(0, 255, 249, 0.8);
+}
+#btnStart {
+  display: none;
+  border: 2px solid #fff!important;
+  box-shadow: 0 0 10px rgba(0, 255, 249, 0.8);
+}
+
+#btnRule {
+  animation-delay: 3s;
+  animation-duration: 1s;
+  border: 2px solid #fff!important;
+  box-shadow: 0 0 10px rgba(0, 255, 249, 0.8);
+}
+
+#btnTryAgain .btn {
+  border: 2px solid #fff!important;
+  box-shadow: 0 0 10px rgba(0, 255, 249, 0.8);
+}
+
+.bg-transparent {
+  background: transparent!important;
+}
+
+
+.us-none {
+  user-select: none;
+}
+
+#btnTryAgain {
+  display: none;
+}
+
+.default-top {
+  transition: all 0.2s ease-in;
+  background-color: transparent;
+}
+.default-top.notontop {
+  background-color: rgba(244, 88, 88, 0.95);
+}
+.default-footer {
+  background-color: rgba(244, 88, 88, 0.95);
+}
+
+footer.p-3.bg-dark-theme.text-center.text-white.position-relative {
+  display: none!important;
+}
+
